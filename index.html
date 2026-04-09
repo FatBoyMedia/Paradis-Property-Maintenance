@@ -6,13 +6,13 @@
   <title>Paradis Property Maintenance | Peterborough, Ontario</title>
   <meta
     name="description"
-    content="Paradis Property Maintenance provides grass cutting, lawn striping, cleanup, and seasonal property maintenance in Peterborough, Ontario. Call or text (705) 772-4204 for a quote."
+    content="Paradis Property Maintenance offers grass cutting, snow clearing, lawn care, cleanups, window cleaning, and general property maintenance in Peterborough, Ontario. Call or text (705) 772-4204 for a quote."
   />
 
   <meta property="og:title" content="Paradis Property Maintenance" />
   <meta
     property="og:description"
-    content="Clean cuts, sharp stripes, dependable property maintenance, and fast quotes in Peterborough, Ontario."
+    content="Grass cutting, snow clearing, lawn care, cleanups, and dependable property maintenance in Peterborough, Ontario."
   />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/hero.jpg" />
@@ -247,7 +247,7 @@
       font-family:"Cormorant Garamond", Georgia, serif;
       font-size:clamp(54px, 8vw, 108px);
       font-weight:700;
-      max-width:8.4ch;
+      max-width:8.8ch;
     }
 
     h2{
@@ -306,7 +306,7 @@
     }
 
     .hero-panel{
-      max-width:650px;
+      max-width:680px;
       background:rgba(255,255,255,0.88);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -319,7 +319,7 @@
     .hero-panel p{
       font-size:18px;
       color:var(--muted);
-      max-width:54ch;
+      max-width:56ch;
       margin:0 0 24px;
     }
 
@@ -444,6 +444,47 @@
     .service p{
       color:var(--muted);
       font-size:15px;
+    }
+
+    .services-list{
+      margin-top:22px;
+      background:var(--white);
+      border:1px solid var(--line-soft);
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow-sm);
+    }
+
+    .services-list-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:16px;
+    }
+
+    .services-list ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .services-list li{
+      color:var(--muted);
+      margin-bottom:10px;
+      font-size:15px;
+    }
+
+    .special-banner{
+      margin-top:22px;
+      background:linear-gradient(135deg, var(--charcoal), var(--charcoal-2));
+      color:#fff;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow-lg);
+    }
+
+    .special-banner p{
+      color:rgba(255,255,255,0.86);
+      font-size:16px;
     }
 
     .work{
@@ -698,7 +739,8 @@
       .floating-grid,
       .work-grid,
       .authority-grid,
-      .business-grid{
+      .business-grid,
+      .services-list-grid{
         grid-template-columns:1fr;
       }
 
@@ -779,7 +821,9 @@
 
       .authority-copy,
       .quote-card,
-      .business-card{
+      .business-card,
+      .services-list,
+      .special-banner{
         padding:28px 20px;
       }
     }
@@ -846,17 +890,17 @@
       <div class="container">
         <div class="hero-shell">
           <div class="hero-image">
-            <img src="images/hero.jpg" alt="Paradis Property Maintenance featured lawn and property maintenance work" />
+            <img src="images/hero.jpg" alt="Paradis Property Maintenance featured work" />
           </div>
 
           <div class="hero-content">
             <div class="hero-panel">
               <div class="eyebrow">Premium Local Service</div>
-              <h1>Property Maintenance With a Stronger Standard</h1>
+              <h1>Property Maintenance Done Right</h1>
               <p>
-                Paradis Property Maintenance delivers clean grass cutting, sharp lawn striping,
-                seasonal cleanup, and dependable outdoor property work in Peterborough.
-                Built to feel polished, trustworthy, and easy to contact.
+                Paradis Property Maintenance provides grass cutting, snow clearing, lawn care,
+                window cleaning, seasonal cleanups, and general property maintenance in Peterborough.
+                Reliable service, clean results, and easy quote requests by call or text.
               </p>
 
               <div class="hero-actions">
@@ -865,9 +909,9 @@
               </div>
 
               <div class="hero-trust">
-                <div class="trust-pill">Real local work</div>
-                <div class="trust-pill">Fast quote response</div>
-                <div class="trust-pill">Clean presentation</div>
+                <div class="trust-pill">Grass cutting</div>
+                <div class="trust-pill">Snow clearing</div>
+                <div class="trust-pill">General property maintenance</div>
               </div>
             </div>
           </div>
@@ -876,18 +920,18 @@
         <div class="floating">
           <div class="floating-grid">
             <div class="floating-box featured">
-              <strong>Built to feel like a real business, not just a simple page.</strong>
-              <span>Strong visuals, clear services, and fast contact paths help Paradis look more established immediately.</span>
+              <strong>Built around the services people actually call for.</strong>
+              <span>Grass cutting, snow clearing, cleanups, lawn care, and dependable property maintenance throughout Peterborough.</span>
             </div>
 
             <div class="floating-box">
-              <strong>Call or text for quotes</strong>
-              <span>The site is designed to push direct quote requests without extra friction.</span>
+              <strong>Fast quote requests</strong>
+              <span>Call or text directly to ask about pricing, availability, or regular service.</span>
             </div>
 
             <div class="floating-box">
-              <strong>Let the work do the selling</strong>
-              <span>Use only your strongest finished-result photos for the premium effect.</span>
+              <strong>Free scrap metal pick up</strong>
+              <span>Available in the Peterborough area as an added local service.</span>
             </div>
           </div>
         </div>
@@ -898,12 +942,12 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Services</div>
-            <h2>Focused Services. Better First Impression.</h2>
+            <div class="eyebrow">Main Services</div>
+            <h2>Professional Property Services in Peterborough</h2>
           </div>
           <p>
-            Keep the offer tight, clear, and easy to understand. The goal is to make people
-            feel confident enough to call or text right away.
+            Paradis Property Maintenance focuses on dependable outdoor and seasonal services
+            that help keep residential properties clean, maintained, and looking their best.
           </p>
         </div>
 
@@ -911,26 +955,81 @@
           <article class="service">
             <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
-            <p>Consistent lawn maintenance with a clean, professional finish that keeps the whole property looking cared for.</p>
+            <p>
+              Regular grass cutting and lawn maintenance for clean, sharp, well-kept properties.
+            </p>
           </article>
 
           <article class="service">
-            <div class="service-icon">✅</div>
-            <h3>Lawn Striping</h3>
-            <p>Sharp visible striping that improves curb appeal and gives the lawn a stronger finished look.</p>
+            <div class="service-icon">❄️</div>
+            <h3>Snow Clearing</h3>
+            <p>
+              Reliable snow clearing service to help keep driveways, walkways, and outdoor areas accessible.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-icon">🧼</div>
+            <h3>Window Cleaning</h3>
+            <p>
+              Window cleaning services to help improve the overall look and presentation of the property.
+            </p>
           </article>
 
           <article class="service">
             <div class="service-icon">🧹</div>
-            <h3>Property Cleanup</h3>
-            <p>Outdoor cleanup work that helps reset the appearance of the property quickly and cleanly.</p>
+            <h3>General Property Maintenance</h3>
+            <p>
+              Ongoing property upkeep, cleanup work, and general maintenance services throughout the season.
+            </p>
           </article>
+        </div>
 
-          <article class="service">
-            <div class="service-icon">🍂</div>
-            <h3>Seasonal Maintenance</h3>
-            <p>Seasonal outdoor work designed to keep residential properties neat, fresh, and presentable through the year.</p>
-          </article>
+        <div class="services-list">
+          <div class="eyebrow">Service List</div>
+          <h2 style="font-size:clamp(30px,4vw,50px);">What We Offer</h2>
+
+          <div class="services-list-grid">
+            <div>
+              <h3 style="font-size:20px;">Lawn & Grass Services</h3>
+              <ul>
+                <li>Grass cutting</li>
+                <li>Aerating</li>
+                <li>Overseeding</li>
+                <li>Lawn fertilizing</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="font-size:20px;">Yard & Garden Services</h3>
+              <ul>
+                <li>Garden bed maintenance</li>
+                <li>Mulching</li>
+                <li>Tree trimming</li>
+                <li>Hedge trimming</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="font-size:20px;">Seasonal & Property Services</h3>
+              <ul>
+                <li>Snow clearing</li>
+                <li>Spring cleanups</li>
+                <li>Fall cleanups</li>
+                <li>Window cleaning</li>
+                <li>General property maintenance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-banner">
+          <div class="eyebrow" style="background:rgba(255,255,255,0.10); color:#fff; border-color:rgba(255,255,255,0.10);">Peterborough Area</div>
+          <h2 style="color:#fff; font-size:clamp(30px,4vw,52px);">Free Scrap Metal Pick Up</h2>
+          <p>
+            Paradis Property Maintenance also offers <strong style="color:#fff;">free scrap metal pick up in the Peterborough area</strong>.
+            Reach out by call or text to arrange pickup.
+          </p>
         </div>
       </div>
     </section>
@@ -940,11 +1039,11 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Selected Work</div>
-            <h2>The Work Should Carry the Brand</h2>
+            <h2>Clean Work. Strong Presentation.</h2>
           </div>
           <p>
-            Use only the strongest real Paradis photos. Bigger presentation, fewer images,
-            better choices.
+            Use your strongest real photos here for grass cutting, lawn care, seasonal work,
+            and finished property results.
           </p>
         </div>
 
@@ -956,12 +1055,12 @@
 
           <div class="work-stack">
             <div class="work-small">
-              <img src="images/work-1.jpg" alt="Striped lawn by Paradis Property Maintenance" />
-              <div class="image-label">Striped Lawn</div>
+              <img src="images/work-1.jpg" alt="Grass cutting work by Paradis Property Maintenance" />
+              <div class="image-label">Grass Cutting</div>
             </div>
             <div class="work-small">
-              <img src="images/work-2.jpg" alt="Clean finished property by Paradis Property Maintenance" />
-              <div class="image-label">Clean Finish</div>
+              <img src="images/work-2.jpg" alt="Property maintenance work by Paradis Property Maintenance" />
+              <div class="image-label">Property Maintenance</div>
             </div>
           </div>
         </div>
@@ -973,10 +1072,11 @@
         <div class="authority-grid">
           <div class="authority-copy">
             <div class="eyebrow">Why Choose Paradis</div>
-            <h2>Clear Service. Real Presentation. Easy Contact.</h2>
+            <h2>Reliable Service With a Wide Range of Property Work</h2>
             <p>
-              A strong property maintenance site should feel like a real company with real standards.
-              This layout is built to give Paradis more business presence while keeping the site simple and easy to manage.
+              Paradis Property Maintenance is built around practical, dependable service.
+              From routine grass cutting and snow clearing to cleanups, lawn care, and general upkeep,
+              the focus is on making properties look better and stay maintained year-round.
             </p>
           </div>
 
@@ -984,32 +1084,32 @@
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>Cleaner visual identity</strong>
-                <span>Red, white, and charcoal keep the look strong, sharp, and easy to recognize.</span>
+                <strong>Main seasonal services covered</strong>
+                <span>Grass cutting in season and snow clearing when winter hits.</span>
               </div>
             </div>
 
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>Real jobsite proof</strong>
-                <span>The site is built around actual work photos instead of relying on generic stock visuals.</span>
+                <strong>More than basic mowing</strong>
+                <span>Aerating, overseeding, fertilizing, mulching, garden bed care, and trimming services are also available.</span>
               </div>
             </div>
 
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>Built for quotes</strong>
-                <span>Visitors can call or text from anywhere on the page without hunting for contact info.</span>
+                <strong>General property maintenance support</strong>
+                <span>Window cleaning, spring and fall cleanups, and other upkeep services help keep the property looking its best.</span>
               </div>
             </div>
 
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>Simple to maintain</strong>
-                <span>One HTML file, image placeholders, and no complicated setup needed for GitHub Pages.</span>
+                <strong>Easy to contact</strong>
+                <span>Call or text directly for quotes, availability, or questions about specific property needs.</span>
               </div>
             </div>
           </div>
@@ -1022,10 +1122,10 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Business Information</div>
-            <h2>Everything People Need to Reach Out</h2>
+            <h2>Everything You Need to Reach Out</h2>
           </div>
           <p>
-            This adds the “real business” feel without making the site cluttered.
+            Clear contact details and service information make it easy to get started.
           </p>
         </div>
 
@@ -1046,10 +1146,10 @@
           <div class="business-card">
             <h3>Best Reasons to Contact</h3>
             <ul>
-              <li>Request a quote</li>
-              <li>Ask about availability</li>
-              <li>Send photos by text</li>
-              <li>Start a regular service conversation</li>
+              <li>Request a quote for grass cutting</li>
+              <li>Ask about snow clearing</li>
+              <li>Book a spring or fall cleanup</li>
+              <li>Arrange free scrap metal pickup</li>
             </ul>
           </div>
         </div>
@@ -1060,10 +1160,10 @@
       <div class="container">
         <div class="quote-card">
           <div class="eyebrow">Get a Quote</div>
-          <h2>Need Property Maintenance Work Done?</h2>
+          <h2>Need Property Maintenance Services?</h2>
           <p>
-            Call or text Paradis Property Maintenance for a quote. This page is built to make the next step obvious:
-            see the work, trust the presentation, and contact the business fast.
+            Call or text Paradis Property Maintenance for quotes on grass cutting, snow clearing,
+            lawn care, cleanups, window cleaning, and general property maintenance in Peterborough.
           </p>
 
           <div class="quote-actions">
