@@ -12,7 +12,7 @@
   <meta property="og:title" content="Paradis Property Maintenance" />
   <meta
     property="og:description"
-    content="Clean cuts, sharp stripes, and dependable property maintenance in Peterborough, Ontario."
+    content="Clean cuts, sharp stripes, dependable property maintenance, and fast quotes in Peterborough, Ontario."
   />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/hero.jpg" />
@@ -23,36 +23,36 @@
 
   <style>
     :root{
-      --bg:#faf8f5;
-      --panel:#ffffff;
-      --panel-soft:#f4f1ec;
-      --text:#101010;
-      --muted:#6c6c6c;
-      --muted-2:#8f8f8f;
-      --line:rgba(16,16,16,0.08);
-      --line-soft:rgba(16,16,16,0.05);
+      --bg:#f7f6f3;
+      --white:#ffffff;
+      --charcoal:#171717;
+      --charcoal-2:#252525;
+      --muted:#6f6f6f;
+      --muted-2:#8d8d8d;
+      --line:rgba(23,23,23,0.10);
+      --line-soft:rgba(23,23,23,0.06);
       --red:#c51627;
-      --red-deep:#8e101c;
-      --red-soft:#fff1f2;
-      --shadow-xl:0 36px 90px rgba(16,16,16,0.14);
-      --shadow-lg:0 22px 50px rgba(16,16,16,0.10);
-      --shadow-md:0 12px 28px rgba(16,16,16,0.08);
-      --shadow-sm:0 6px 18px rgba(16,16,16,0.06);
+      --red-deep:#8d101b;
+      --red-soft:#fff1f3;
+      --shadow-xl:0 34px 90px rgba(0,0,0,0.14);
+      --shadow-lg:0 20px 50px rgba(0,0,0,0.10);
+      --shadow-md:0 12px 30px rgba(0,0,0,0.08);
+      --shadow-sm:0 6px 18px rgba(0,0,0,0.06);
       --radius-xxl:42px;
       --radius-xl:32px;
       --radius-lg:24px;
       --radius-md:18px;
-      --max:1280px;
+      --max:1260px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family:"Inter", Arial, Helvetica, sans-serif;
-      color:var(--text);
+      color:var(--charcoal);
       background:
-        radial-gradient(circle at top left, rgba(197,22,39,0.06), transparent 20%),
+        radial-gradient(circle at top left, rgba(197,22,39,0.05), transparent 20%),
         radial-gradient(circle at bottom right, rgba(197,22,39,0.04), transparent 16%),
         var(--bg);
       line-height:1.5;
@@ -60,8 +60,8 @@
       text-rendering:optimizeLegibility;
     }
 
-    img{display:block;max-width:100%}
-    a{text-decoration:none;color:inherit}
+    img{ display:block; max-width:100%; }
+    a{ color:inherit; text-decoration:none; }
 
     .container{
       width:min(calc(100% - 32px), var(--max));
@@ -69,8 +69,10 @@
     }
 
     .topbar{
-      background:rgba(255,255,255,0.92);
-      border-bottom:1px solid var(--line-soft);
+      background:var(--charcoal);
+      color:rgba(255,255,255,0.90);
+      font-size:13px;
+      border-bottom:1px solid rgba(255,255,255,0.06);
     }
 
     .topbar-inner{
@@ -79,24 +81,21 @@
       align-items:center;
       gap:16px;
       flex-wrap:wrap;
-      padding:12px 0;
-      font-size:13px;
-      color:var(--muted);
+      padding:10px 0;
     }
 
     .topbar-links{
       display:flex;
       gap:18px;
       flex-wrap:wrap;
+      align-items:center;
     }
-
-    .topbar a:hover{color:var(--red)}
 
     .site-header{
       position:sticky;
       top:0;
       z-index:1100;
-      background:rgba(250,248,245,0.86);
+      background:rgba(247,246,243,0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom:1px solid var(--line-soft);
@@ -127,7 +126,7 @@
       color:#fff;
       font-weight:900;
       letter-spacing:.7px;
-      box-shadow:0 16px 34px rgba(197,22,39,0.22);
+      box-shadow:0 16px 36px rgba(197,22,39,0.24);
       flex:0 0 auto;
     }
 
@@ -139,8 +138,8 @@
     }
 
     .brand-copy span{
-      font-weight:800;
       font-size:15px;
+      font-weight:800;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -168,7 +167,7 @@
       transition:.18s ease;
     }
 
-    .nav-links a:hover{color:var(--text)}
+    .nav-links a:hover{ color:var(--charcoal); }
 
     .btn{
       display:inline-flex;
@@ -177,29 +176,29 @@
       gap:10px;
       min-height:56px;
       padding:15px 22px;
-      border-radius:999px;
       border:none;
+      border-radius:999px;
       font-weight:800;
+      text-align:center;
       cursor:pointer;
       transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-      text-align:center;
     }
 
-    .btn:hover{transform:translateY(-1px)}
+    .btn:hover{ transform:translateY(-1px); }
 
     .btn-primary{
       background:linear-gradient(135deg, var(--red), var(--red-deep));
       color:#fff;
-      box-shadow:0 16px 34px rgba(197,22,39,0.22);
+      box-shadow:0 16px 36px rgba(197,22,39,0.24);
     }
 
     .btn-primary:hover{
-      box-shadow:0 24px 48px rgba(197,22,39,0.28);
+      box-shadow:0 22px 48px rgba(197,22,39,0.30);
     }
 
     .btn-secondary{
-      background:rgba(255,255,255,0.85);
-      color:var(--text);
+      background:rgba(255,255,255,0.94);
+      color:var(--charcoal);
       border:1px solid var(--line);
       box-shadow:var(--shadow-sm);
     }
@@ -209,7 +208,17 @@
       border-color:rgba(197,22,39,0.18);
     }
 
-    .btn-full{width:100%}
+    .btn-dark{
+      background:var(--charcoal);
+      color:#fff;
+      box-shadow:var(--shadow-md);
+    }
+
+    .btn-dark:hover{
+      background:var(--charcoal-2);
+    }
+
+    .btn-full{ width:100%; }
 
     .eyebrow{
       display:inline-flex;
@@ -236,14 +245,14 @@
 
     h1{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(56px, 9vw, 118px);
+      font-size:clamp(54px, 8vw, 108px);
       font-weight:700;
-      max-width:8.2ch;
+      max-width:8.4ch;
     }
 
     h2{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(36px, 5vw, 66px);
+      font-size:clamp(36px, 5vw, 64px);
       font-weight:700;
     }
 
@@ -252,16 +261,15 @@
       font-weight:800;
     }
 
-    p{margin:0}
+    p{ margin:0; }
 
     .hero{
-      position:relative;
       padding:20px 0 24px;
     }
 
     .hero-shell{
       position:relative;
-      min-height:860px;
+      min-height:840px;
       border-radius:var(--radius-xxl);
       overflow:hidden;
       box-shadow:var(--shadow-xl);
@@ -284,7 +292,7 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(90deg, rgba(16,16,16,0.58) 0%, rgba(16,16,16,0.22) 42%, rgba(16,16,16,0.14) 100%);
+        linear-gradient(90deg, rgba(23,23,23,0.58) 0%, rgba(23,23,23,0.28) 44%, rgba(23,23,23,0.12) 100%);
       pointer-events:none;
     }
 
@@ -293,16 +301,16 @@
       z-index:2;
       display:flex;
       align-items:flex-end;
-      min-height:860px;
-      padding:56px;
+      min-height:840px;
+      padding:58px;
     }
 
     .hero-panel{
-      max-width:640px;
-      background:rgba(255,255,255,0.86);
+      max-width:650px;
+      background:rgba(255,255,255,0.88);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      border:1px solid rgba(255,255,255,0.65);
+      border:1px solid rgba(255,255,255,0.70);
       border-radius:36px;
       padding:34px 34px 30px;
       box-shadow:var(--shadow-lg);
@@ -334,27 +342,27 @@
       gap:8px;
       padding:10px 13px;
       border-radius:999px;
-      background:rgba(255,255,255,0.82);
-      border:1px solid rgba(16,16,16,0.05);
+      background:rgba(255,255,255,0.86);
+      border:1px solid rgba(23,23,23,0.06);
       color:var(--muted);
       font-size:14px;
       font-weight:700;
     }
 
-    .floating-card{
+    .floating{
       position:relative;
-      margin-top:-84px;
       z-index:3;
+      margin-top:-84px;
     }
 
     .floating-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr .95fr;
+      grid-template-columns:1.15fr .9fr .9fr;
       gap:18px;
     }
 
     .floating-box{
-      background:var(--panel);
+      background:var(--white);
       border:1px solid var(--line-soft);
       border-radius:28px;
       padding:26px;
@@ -368,23 +376,23 @@
     }
 
     .floating-box span{
+      display:block;
       color:var(--muted);
       font-size:15px;
-      display:block;
     }
 
-    .floating-highlight{
+    .floating-box.featured{
       background:linear-gradient(135deg, var(--red), var(--red-deep));
       color:#fff;
       border:none;
     }
 
-    .floating-highlight span{
+    .floating-box.featured span{
       color:rgba(255,255,255,0.88);
     }
 
     .section{
-      padding:74px 0 20px;
+      padding:74px 0 0;
     }
 
     .section-head{
@@ -408,7 +416,7 @@
     }
 
     .service{
-      background:var(--panel);
+      background:var(--white);
       border:1px solid var(--line-soft);
       border-radius:30px;
       padding:30px;
@@ -438,18 +446,18 @@
       font-size:15px;
     }
 
-    .showcase{
-      padding:74px 0 20px;
+    .work{
+      padding:74px 0 0;
     }
 
-    .showcase-grid{
+    .work-grid{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns:1.08fr .92fr;
       gap:22px;
       align-items:stretch;
     }
 
-    .feature-image{
+    .work-feature{
       position:relative;
       min-height:760px;
       border-radius:36px;
@@ -458,29 +466,29 @@
       background:#ddd;
     }
 
-    .feature-image img,
-    .stack-image img{
+    .work-feature img,
+    .work-small img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
 
-    .feature-image::after,
-    .stack-image::after{
+    .work-feature::after,
+    .work-small::after{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(16,16,16,0.05), rgba(16,16,16,0.28));
+      background:linear-gradient(180deg, rgba(23,23,23,0.04), rgba(23,23,23,0.24));
       pointer-events:none;
     }
 
-    .stack{
+    .work-stack{
       display:grid;
       grid-template-rows:1fr 1fr;
       gap:22px;
     }
 
-    .stack-image{
+    .work-small{
       position:relative;
       min-height:369px;
       border-radius:32px;
@@ -496,8 +504,8 @@
       z-index:2;
       padding:10px 13px;
       border-radius:999px;
-      background:rgba(255,255,255,0.88);
-      color:var(--text);
+      background:rgba(255,255,255,0.90);
+      color:var(--charcoal);
       font-size:12px;
       font-weight:900;
       letter-spacing:.7px;
@@ -505,26 +513,26 @@
       box-shadow:var(--shadow-sm);
     }
 
-    .why{
-      padding:74px 0 20px;
+    .authority{
+      padding:74px 0 0;
     }
 
-    .why-grid{
+    .authority-grid{
       display:grid;
       grid-template-columns:.92fr 1.08fr;
       gap:22px;
       align-items:start;
     }
 
-    .why-copy{
-      background:var(--panel);
+    .authority-copy{
+      background:var(--white);
       border-radius:34px;
       padding:38px;
       border:1px solid var(--line-soft);
       box-shadow:var(--shadow-sm);
     }
 
-    .why-copy p{
+    .authority-copy p{
       color:var(--muted);
       font-size:16px;
     }
@@ -540,7 +548,7 @@
       align-items:flex-start;
       padding:22px;
       border-radius:26px;
-      background:var(--panel);
+      background:var(--white);
       border:1px solid var(--line-soft);
       box-shadow:var(--shadow-sm);
     }
@@ -570,6 +578,39 @@
       font-size:15px;
     }
 
+    .business{
+      padding:74px 0 0;
+    }
+
+    .business-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .business-card{
+      background:var(--white);
+      border:1px solid var(--line-soft);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow-sm);
+    }
+
+    .business-card h3{
+      margin-bottom:10px;
+    }
+
+    .business-card p,
+    .business-card li{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .business-card ul{
+      margin:0;
+      padding-left:18px;
+    }
+
     .quote{
       padding:74px 0 120px;
     }
@@ -579,7 +620,7 @@
       overflow:hidden;
       background:
         linear-gradient(135deg, rgba(197,22,39,0.06), rgba(197,22,39,0.02)),
-        var(--panel);
+        var(--white);
       border:1px solid rgba(197,22,39,0.08);
       border-radius:40px;
       box-shadow:var(--shadow-xl);
@@ -625,7 +666,7 @@
       flex-wrap:wrap;
     }
 
-    .footer strong{color:var(--text)}
+    .footer strong{ color:var(--charcoal); }
 
     .sticky-bar{
       position:fixed;
@@ -634,10 +675,10 @@
       bottom:0;
       z-index:1200;
       padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-      background:rgba(250,248,245,0.93);
+      background:rgba(247,246,243,0.94);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-top:1px solid rgba(16,16,16,0.06);
+      border-top:1px solid rgba(23,23,23,0.06);
     }
 
     .sticky-inner{
@@ -655,9 +696,9 @@
 
     @media (max-width: 1100px){
       .floating-grid,
-      .services-grid,
-      .showcase-grid,
-      .why-grid{
+      .work-grid,
+      .authority-grid,
+      .business-grid{
         grid-template-columns:1fr;
       }
 
@@ -666,15 +707,15 @@
         min-height:680px;
       }
 
-      .feature-image{
+      .work-feature{
         min-height:460px;
       }
 
-      .stack{
+      .work-stack{
         grid-template-rows:auto;
       }
 
-      .stack-image{
+      .work-small{
         min-height:260px;
       }
     }
@@ -723,7 +764,7 @@
         font-size:16px;
       }
 
-      .floating-card{
+      .floating{
         margin-top:-30px;
       }
 
@@ -736,8 +777,9 @@
         grid-template-columns:1fr;
       }
 
-      .why-copy,
-      .quote-card{
+      .authority-copy,
+      .quote-card,
+      .business-card{
         padding:28px 20px;
       }
     }
@@ -756,7 +798,6 @@
 
       h1{
         font-size:58px;
-        max-width:9ch;
       }
 
       .sticky-inner .btn{
@@ -793,7 +834,7 @@
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#why">Why Us</a>
-        <a href="#quote">Quote</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <a class="btn btn-primary" href="tel:17057724204">Call Now</a>
@@ -805,17 +846,17 @@
       <div class="container">
         <div class="hero-shell">
           <div class="hero-image">
-            <img src="images/hero.jpg" alt="Premium striped lawn by Paradis Property Maintenance" />
+            <img src="images/hero.jpg" alt="Paradis Property Maintenance featured lawn and property maintenance work" />
           </div>
 
           <div class="hero-content">
             <div class="hero-panel">
               <div class="eyebrow">Premium Local Service</div>
-              <h1>Property Maintenance With More Presence</h1>
+              <h1>Property Maintenance With a Stronger Standard</h1>
               <p>
                 Paradis Property Maintenance delivers clean grass cutting, sharp lawn striping,
                 seasonal cleanup, and dependable outdoor property work in Peterborough.
-                Built to feel polished, premium, and worth contacting immediately.
+                Built to feel polished, trustworthy, and easy to contact.
               </p>
 
               <div class="hero-actions">
@@ -826,27 +867,27 @@
               <div class="hero-trust">
                 <div class="trust-pill">Real local work</div>
                 <div class="trust-pill">Fast quote response</div>
-                <div class="trust-pill">Better first impression</div>
+                <div class="trust-pill">Clean presentation</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="floating-card">
+        <div class="floating">
           <div class="floating-grid">
-            <div class="floating-box floating-highlight">
-              <strong>Clean presentation matters.</strong>
-              <span>This layout is built to make Paradis feel more established and high-end without overcomplicating the message.</span>
+            <div class="floating-box featured">
+              <strong>Built to feel like a real business, not just a simple page.</strong>
+              <span>Strong visuals, clear services, and fast contact paths help Paradis look more established immediately.</span>
             </div>
 
             <div class="floating-box">
-              <strong>Built for calls and texts</strong>
-              <span>Everything is structured to push quote requests fast on mobile and desktop.</span>
+              <strong>Call or text for quotes</strong>
+              <span>The site is designed to push direct quote requests without extra friction.</span>
             </div>
 
             <div class="floating-box">
-              <strong>Let the work sell it</strong>
-              <span>The right photos will do more here than ten extra sections ever could.</span>
+              <strong>Let the work do the selling</strong>
+              <span>Use only your strongest finished-result photos for the premium effect.</span>
             </div>
           </div>
         </div>
@@ -858,11 +899,11 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Services</div>
-            <h2>Focused Services. Stronger Brand Feel.</h2>
+            <h2>Focused Services. Better First Impression.</h2>
           </div>
           <p>
-            Keep the offer tight and selective. A premium service page should feel clear,
-            visual, and deliberate instead of crowded.
+            Keep the offer tight, clear, and easy to understand. The goal is to make people
+            feel confident enough to call or text right away.
           </p>
         </div>
 
@@ -870,13 +911,13 @@
           <article class="service">
             <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
-            <p>Consistent lawn maintenance with a clean, polished finish that makes the property look professionally cared for.</p>
+            <p>Consistent lawn maintenance with a clean, professional finish that keeps the whole property looking cared for.</p>
           </article>
 
           <article class="service">
             <div class="service-icon">✅</div>
             <h3>Lawn Striping</h3>
-            <p>Sharp visible striping that instantly improves curb appeal and creates a more premium finished look.</p>
+            <p>Sharp visible striping that improves curb appeal and gives the lawn a stronger finished look.</p>
           </article>
 
           <article class="service">
@@ -894,31 +935,31 @@
       </div>
     </section>
 
-    <section id="work" class="showcase">
+    <section id="work" class="work">
       <div class="container">
         <div class="section-head">
           <div>
             <div class="eyebrow">Selected Work</div>
-            <h2>The Images Need to Carry the Luxury Feel</h2>
+            <h2>The Work Should Carry the Brand</h2>
           </div>
           <p>
-            Use only the strongest real Paradis photos. Fewer images. Better images.
-            Bigger presentation. That is what makes the page feel expensive.
+            Use only the strongest real Paradis photos. Bigger presentation, fewer images,
+            better choices.
           </p>
         </div>
 
-        <div class="showcase-grid">
-          <div class="feature-image">
-            <img src="images/work-feature.jpg" alt="Featured lawn result by Paradis Property Maintenance" />
+        <div class="work-grid">
+          <div class="work-feature">
+            <img src="images/work-feature.jpg" alt="Featured Paradis Property Maintenance project" />
             <div class="image-label">Featured Result</div>
           </div>
 
-          <div class="stack">
-            <div class="stack-image">
+          <div class="work-stack">
+            <div class="work-small">
               <img src="images/work-1.jpg" alt="Striped lawn by Paradis Property Maintenance" />
               <div class="image-label">Striped Lawn</div>
             </div>
-            <div class="stack-image">
+            <div class="work-small">
               <img src="images/work-2.jpg" alt="Clean finished property by Paradis Property Maintenance" />
               <div class="image-label">Clean Finish</div>
             </div>
@@ -927,15 +968,15 @@
       </div>
     </section>
 
-    <section id="why" class="why">
+    <section id="why" class="authority">
       <div class="container">
-        <div class="why-grid">
-          <div class="why-copy">
+        <div class="authority-grid">
+          <div class="authority-copy">
             <div class="eyebrow">Why Choose Paradis</div>
-            <h2>Less Template. More Presence.</h2>
+            <h2>Clear Service. Real Presentation. Easy Contact.</h2>
             <p>
-              This version is intentionally more visual and more branded. The goal is simple:
-              make Paradis feel sharper, more premium, and easier to trust within seconds.
+              A strong property maintenance site should feel like a real company with real standards.
+              This layout is built to give Paradis more business presence while keeping the site simple and easy to manage.
             </p>
           </div>
 
@@ -944,7 +985,7 @@
               <div class="point-mark">✓</div>
               <div>
                 <strong>Cleaner visual identity</strong>
-                <span>White space, stronger red contrast, and a bolder hero create a better first impression immediately.</span>
+                <span>Red, white, and charcoal keep the look strong, sharp, and easy to recognize.</span>
               </div>
             </div>
 
@@ -952,23 +993,23 @@
               <div class="point-mark">✓</div>
               <div>
                 <strong>Real jobsite proof</strong>
-                <span>The strongest Paradis photos should do most of the convincing without needing too much extra copy.</span>
+                <span>The site is built around actual work photos instead of relying on generic stock visuals.</span>
               </div>
             </div>
 
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>Built for quote action</strong>
-                <span>Call and text paths stay obvious on any device so visitors can act as soon as they are interested.</span>
+                <strong>Built for quotes</strong>
+                <span>Visitors can call or text from anywhere on the page without hunting for contact info.</span>
               </div>
             </div>
 
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>More custom feel</strong>
-                <span>The overlapping layout and stronger hero treatment make the page feel less basic and more designed.</span>
+                <strong>Simple to maintain</strong>
+                <span>One HTML file, image placeholders, and no complicated setup needed for GitHub Pages.</span>
               </div>
             </div>
           </div>
@@ -976,20 +1017,59 @@
       </div>
     </section>
 
-    <section id="quote" class="quote">
+    <section class="business">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Business Information</div>
+            <h2>Everything People Need to Reach Out</h2>
+          </div>
+          <p>
+            This adds the “real business” feel without making the site cluttered.
+          </p>
+        </div>
+
+        <div class="business-grid">
+          <div class="business-card">
+            <h3>Service Area</h3>
+            <p>Peterborough, Ontario and surrounding area.</p>
+          </div>
+
+          <div class="business-card">
+            <h3>Contact</h3>
+            <p>
+              Phone: <a href="tel:17057724204">(705) 772-4204</a><br />
+              Email: <a href="mailto:paradispropertymaintenance@gmail.com">paradispropertymaintenance@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="business-card">
+            <h3>Best Reasons to Contact</h3>
+            <ul>
+              <li>Request a quote</li>
+              <li>Ask about availability</li>
+              <li>Send photos by text</li>
+              <li>Start a regular service conversation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="quote">
       <div class="container">
         <div class="quote-card">
           <div class="eyebrow">Get a Quote</div>
           <h2>Need Property Maintenance Work Done?</h2>
           <p>
-            Call or text Paradis Property Maintenance for a quote. The site is built to make the next step obvious:
+            Call or text Paradis Property Maintenance for a quote. This page is built to make the next step obvious:
             see the work, trust the presentation, and contact the business fast.
           </p>
 
           <div class="quote-actions">
             <a class="btn btn-primary" href="tel:17057724204">Call (705) 772-4204</a>
             <a class="btn btn-secondary" href="sms:17057724204">Text for a Quote</a>
-            <a class="btn btn-secondary" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
+            <a class="btn btn-dark" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
           </div>
         </div>
       </div>
