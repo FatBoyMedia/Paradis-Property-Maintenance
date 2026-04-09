@@ -3,61 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paradis Property Maintenance | Peterborough Property Maintenance</title>
-  <meta
-    name="description"
-    content="Paradis Property Maintenance provides grass cutting, lawn striping, cleanup, and seasonal property maintenance in Peterborough, Ontario. Call or text (705) 772-4204 for a quote."
-  />
+  <title>Paradis Property Maintenance | Peterborough, Ontario</title>
+  <meta name="description" content="Paradis Property Maintenance provides grass cutting, lawn striping, seasonal cleanup, and outdoor property maintenance in Peterborough, Ontario. Call or text (705) 772-4204 for a quote." />
 
   <meta property="og:title" content="Paradis Property Maintenance" />
-  <meta
-    property="og:description"
-    content="Grass cutting, lawn striping, cleanup, and dependable property maintenance in Peterborough. Call or text for a quote."
-  />
+  <meta property="og:description" content="Clean cuts, sharp stripes, and dependable property maintenance in Peterborough, Ontario." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/hero.jpg" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg: #f3f5f1;
-      --surface: rgba(255,255,255,0.88);
-      --surface-solid: #ffffff;
-      --text: #0f1710;
-      --muted: #5f6e61;
-      --line: rgba(19, 34, 22, 0.09);
-      --green: #2c6a37;
-      --green-deep: #193d22;
-      --green-soft: #e8f0e7;
-      --accent: #d9e8d4;
-      --shadow-lg: 0 24px 60px rgba(17, 28, 19, 0.10);
-      --shadow-md: 0 14px 30px rgba(17, 28, 19, 0.08);
-      --shadow-sm: 0 8px 18px rgba(17, 28, 19, 0.06);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --max: 1200px;
+      --bg:#0c110d;
+      --bg-soft:#121914;
+      --surface:#151d17;
+      --surface-2:#1b241d;
+      --card:#101712;
+      --line:rgba(255,255,255,0.08);
+      --line-soft:rgba(255,255,255,0.05);
+      --text:#f4f5f1;
+      --muted:#b5beb4;
+      --muted-2:#8e998f;
+      --accent:#d8e7c5;
+      --accent-2:#7ca36f;
+      --accent-3:#3f5e43;
+      --white:#ffffff;
+      --shadow-lg:0 30px 80px rgba(0,0,0,0.35);
+      --shadow-md:0 18px 40px rgba(0,0,0,0.25);
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --max:1240px;
     }
 
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box}
 
-    html{ scroll-behavior:smooth; }
+    html{scroll-behavior:smooth}
 
     body{
       margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      color:var(--text);
+      font-family:"Inter", Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(217,232,212,0.7), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(232,240,231,0.9), transparent 24%),
-        var(--bg);
+        radial-gradient(circle at top left, rgba(124,163,111,0.12), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(216,231,197,0.08), transparent 20%),
+        linear-gradient(180deg, #0b100c 0%, #0f1511 100%);
+      color:var(--text);
       line-height:1.5;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
 
     img{
-      display:block;
       max-width:100%;
+      display:block;
     }
 
     a{
@@ -71,48 +72,46 @@
     }
 
     .topbar{
-      background:#101b12;
-      color:rgba(255,255,255,0.92);
-      font-size:14px;
-      border-bottom:1px solid rgba(255,255,255,0.06);
+      border-bottom:1px solid var(--line-soft);
+      background:rgba(7,10,8,0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     .topbar-inner{
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       gap:16px;
       flex-wrap:wrap;
       padding:10px 0;
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.2px;
     }
 
     .topbar-links{
       display:flex;
-      align-items:center;
-      gap:16px;
+      gap:18px;
       flex-wrap:wrap;
-    }
-
-    .topbar a:hover{
-      opacity:0.85;
     }
 
     .site-header{
       position:sticky;
       top:0;
       z-index:1000;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background:rgba(243,245,241,0.72);
-      border-bottom:1px solid rgba(19,34,22,0.06);
+      background:rgba(10,14,11,0.74);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom:1px solid var(--line-soft);
     }
 
     .nav{
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       gap:20px;
-      padding:16px 0;
+      padding:18px 0;
     }
 
     .brand{
@@ -123,29 +122,31 @@
     }
 
     .brand-mark{
-      width:48px;
-      height:48px;
+      width:50px;
+      height:50px;
       border-radius:16px;
-      background:linear-gradient(135deg, var(--green-deep), var(--green));
+      background:
+        linear-gradient(135deg, #26392a 0%, #4d6f50 100%);
+      border:1px solid rgba(255,255,255,0.08);
       display:grid;
       place-items:center;
-      color:#fff;
       font-weight:800;
-      letter-spacing:0.5px;
-      box-shadow: var(--shadow-md);
+      color:var(--white);
+      letter-spacing:.5px;
+      box-shadow:var(--shadow-md);
       flex:0 0 auto;
     }
 
     .brand-copy{
       display:flex;
       flex-direction:column;
-      line-height:1.05;
       min-width:0;
+      line-height:1.05;
     }
 
     .brand-copy span{
       font-weight:800;
-      letter-spacing:0.1px;
+      font-size:15px;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -153,27 +154,28 @@
 
     .brand-copy small{
       margin-top:5px;
-      color:var(--muted);
-      font-size:12px;
-      font-weight:800;
+      color:var(--muted-2);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:1px;
       text-transform:uppercase;
-      letter-spacing:0.9px;
     }
 
     .nav-links{
       display:flex;
       align-items:center;
-      gap:24px;
+      gap:28px;
     }
 
     .nav-links a{
       color:var(--muted);
-      font-weight:700;
-      font-size:15px;
+      font-weight:600;
+      font-size:14px;
+      transition:.2s ease;
     }
 
     .nav-links a:hover{
-      color:var(--text);
+      color:var(--white);
     }
 
     .btn{
@@ -181,14 +183,14 @@
       align-items:center;
       justify-content:center;
       gap:10px;
+      padding:15px 22px;
+      min-height:54px;
+      border-radius:999px;
       border:none;
       cursor:pointer;
-      font-weight:800;
-      border-radius:999px;
-      padding:15px 22px;
-      transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+      font-weight:700;
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
       text-align:center;
-      min-height:52px;
     }
 
     .btn:hover{
@@ -196,24 +198,23 @@
     }
 
     .btn-primary{
-      background:linear-gradient(135deg, var(--green), var(--green-deep));
-      color:#fff;
-      box-shadow: var(--shadow-md);
+      background:linear-gradient(135deg, #dbe8cc 0%, #a7c08d 100%);
+      color:#111611;
+      box-shadow:0 10px 30px rgba(167,192,141,0.18);
     }
 
     .btn-primary:hover{
-      box-shadow: var(--shadow-lg);
+      box-shadow:0 18px 40px rgba(167,192,141,0.24);
     }
 
     .btn-secondary{
-      background:rgba(255,255,255,0.8);
-      color:var(--text);
+      background:rgba(255,255,255,0.04);
+      color:var(--white);
       border:1px solid var(--line);
-      box-shadow: var(--shadow-sm);
     }
 
     .btn-secondary:hover{
-      background:#fff;
+      background:rgba(255,255,255,0.07);
     }
 
     .btn-full{
@@ -224,36 +225,41 @@
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding:9px 13px;
-      border-radius:999px;
-      background:var(--green-soft);
-      color:var(--green-deep);
-      font-size:12px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:0.85px;
       width:max-content;
-      margin-bottom:18px;
-      border:1px solid rgba(25,61,34,0.05);
+      padding:9px 14px;
+      border-radius:999px;
+      border:1px solid rgba(216,231,197,0.14);
+      background:rgba(216,231,197,0.08);
+      color:var(--accent);
+      text-transform:uppercase;
+      font-size:11px;
+      letter-spacing:1px;
+      font-weight:800;
+      margin-bottom:20px;
     }
 
     h1,h2,h3{
       margin:0 0 14px;
-      line-height:1.04;
+      line-height:1.03;
       letter-spacing:-0.03em;
     }
 
     h1{
-      font-size:clamp(38px, 6vw, 72px);
-      max-width:11ch;
+      font-family:"Playfair Display", Georgia, serif;
+      font-size:clamp(44px, 7vw, 88px);
+      max-width:10.5ch;
+      font-weight:800;
     }
 
     h2{
-      font-size:clamp(30px, 4vw, 48px);
+      font-family:"Playfair Display", Georgia, serif;
+      font-size:clamp(32px, 4.5vw, 54px);
+      font-weight:800;
     }
 
     h3{
       font-size:22px;
+      font-weight:700;
     }
 
     p{
@@ -261,60 +267,84 @@
     }
 
     .hero{
-      padding:34px 0 28px;
+      padding:28px 0 40px;
     }
 
-    .hero-grid{
+    .hero-shell{
       display:grid;
       grid-template-columns:1.02fr 0.98fr;
-      gap:28px;
+      gap:24px;
       align-items:stretch;
     }
 
-    .glass{
-      background:var(--surface);
-      border:1px solid rgba(255,255,255,0.65);
-      box-shadow: var(--shadow-lg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
     .hero-copy{
+      padding:52px;
       border-radius:var(--radius-xl);
-      padding:42px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+        linear-gradient(135deg, rgba(23,31,24,0.95), rgba(15,21,17,0.95));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-lg);
       display:flex;
       flex-direction:column;
       justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-copy::before{
+      content:"";
+      position:absolute;
+      width:340px;
+      height:340px;
+      border-radius:999px;
+      right:-120px;
+      top:-120px;
+      background:radial-gradient(circle, rgba(216,231,197,0.08), transparent 70%);
+      pointer-events:none;
     }
 
     .hero-copy p{
       font-size:18px;
       color:var(--muted);
-      max-width:56ch;
-      margin:0 0 24px;
+      max-width:58ch;
+      margin:0 0 26px;
     }
 
     .hero-actions{
       display:flex;
-      gap:12px;
       flex-wrap:wrap;
-      margin-bottom:18px;
+      gap:12px;
+      margin-bottom:22px;
     }
 
-    .micro-trust{
+    .hero-trust{
       display:flex;
-      gap:10px 16px;
       flex-wrap:wrap;
+      gap:10px 14px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--line-soft);
       color:var(--muted);
       font-size:14px;
-      font-weight:700;
+      font-weight:600;
     }
 
     .hero-media{
+      position:relative;
+      min-height:650px;
       border-radius:var(--radius-xl);
       overflow:hidden;
-      position:relative;
-      min-height:560px;
+      box-shadow:var(--shadow-lg);
+      border:1px solid var(--line);
+      background:#0f1511;
     }
 
     .hero-media img{
@@ -323,33 +353,46 @@
       object-fit:cover;
     }
 
-    .hero-panel{
+    .hero-media::after{
+      content:"";
       position:absolute;
-      left:18px;
-      right:18px;
-      bottom:18px;
-      background:rgba(255,255,255,0.92);
-      border:1px solid rgba(255,255,255,0.7);
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.36) 100%);
+      pointer-events:none;
+    }
+
+    .hero-card{
+      position:absolute;
+      left:22px;
+      right:22px;
+      bottom:22px;
+      z-index:2;
       border-radius:24px;
-      padding:18px 18px 16px;
-      box-shadow: var(--shadow-md);
+      padding:20px 22px;
+      background:rgba(12,17,13,0.72);
+      border:1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow:var(--shadow-md);
     }
 
-    .hero-panel strong{
+    .hero-card strong{
       display:block;
-      font-size:20px;
-      margin-bottom:4px;
+      font-size:22px;
+      margin-bottom:6px;
+      color:var(--white);
     }
 
-    .hero-panel span{
+    .hero-card span{
       display:block;
-      color:var(--muted);
+      color:#d2d9d0;
       font-size:14px;
-      font-weight:700;
+      font-weight:500;
     }
 
     section{
-      padding:34px 0;
+      padding:36px 0;
     }
 
     .section-head{
@@ -361,215 +404,225 @@
     }
 
     .section-head p{
-      color:var(--muted);
-      max-width:58ch;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
-
-    .card{
-      padding:24px;
-      border-radius:var(--radius-lg);
-      background:var(--surface-solid);
-      border:1px solid var(--line);
-      box-shadow: var(--shadow-md);
-    }
-
-    .icon{
-      width:52px;
-      height:52px;
-      border-radius:16px;
-      display:grid;
-      place-items:center;
-      font-size:22px;
-      background:linear-gradient(135deg, var(--green-soft), #f4f8f2);
-      color:var(--green-deep);
-      margin-bottom:16px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    }
-
-    .card p{
-      color:var(--muted);
-      font-size:15px;
-    }
-
-    .gallery-shell{
-      padding:18px;
-      border-radius:var(--radius-xl);
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
-    }
-
-    .gallery figure{
-      margin:0;
-      min-height:260px;
-      border-radius:22px;
-      overflow:hidden;
-      position:relative;
-      background:#d8dfd6;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .gallery img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      transition:transform .35s ease;
-    }
-
-    .gallery figure:hover img{
-      transform:scale(1.04);
-    }
-
-    .gallery-tag{
-      position:absolute;
-      left:12px;
-      bottom:12px;
-      background:rgba(16,27,18,0.84);
-      color:#fff;
-      border-radius:999px;
-      padding:8px 11px;
-      font-size:12px;
-      font-weight:800;
-      letter-spacing:.4px;
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-      align-items:start;
-    }
-
-    .copy-block{
-      padding:30px;
-      border-radius:var(--radius-lg);
-      background:var(--surface-solid);
-      border:1px solid var(--line);
-      box-shadow: var(--shadow-md);
-    }
-
-    .copy-block p{
+      max-width:56ch;
       color:var(--muted);
       font-size:16px;
     }
 
-    .list{
+    .services-grid{
       display:grid;
-      gap:14px;
+      grid-template-columns:repeat(4, 1fr);
+      gap:18px;
     }
 
-    .list-item{
+    .service{
+      padding:26px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-md);
+      transition:.22s ease;
+    }
+
+    .service:hover{
+      transform:translateY(-3px);
+      border-color:rgba(216,231,197,0.16);
+    }
+
+    .service-icon{
+      width:56px;
+      height:56px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      font-size:24px;
+      margin-bottom:16px;
+      background:linear-gradient(135deg, rgba(216,231,197,0.16), rgba(124,163,111,0.12));
+      border:1px solid rgba(216,231,197,0.08);
+    }
+
+    .service p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .showcase{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .showcase-main,
+    .showcase-side{
+      border-radius:30px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-lg);
+      position:relative;
+      background:var(--surface);
+    }
+
+    .showcase-main{
+      min-height:620px;
+    }
+
+    .showcase-main img,
+    .showcase-stack img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .showcase-main::after,
+    .showcase-stack .item::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.30));
+      pointer-events:none;
+    }
+
+    .showcase-label{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      z-index:2;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(12,17,13,0.76);
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--white);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .showcase-stack{
+      display:grid;
+      grid-template-rows:1fr 1fr;
+      gap:22px;
+      height:100%;
+    }
+
+    .showcase-stack .item{
+      position:relative;
+      min-height:299px;
+      overflow:hidden;
+      border-radius:30px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-lg);
+      background:var(--surface);
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .copy-panel{
+      padding:34px;
+      border-radius:30px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-md);
+    }
+
+    .copy-panel p{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .points{
+      display:grid;
+      gap:16px;
+    }
+
+    .point{
       display:flex;
       gap:14px;
       align-items:flex-start;
-      padding:18px;
-      border-radius:20px;
-      background:var(--surface-solid);
+      padding:20px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
       border:1px solid var(--line);
-      box-shadow: var(--shadow-md);
+      box-shadow:var(--shadow-md);
     }
 
-    .tick{
-      width:30px;
-      height:30px;
-      flex:0 0 30px;
+    .point-mark{
+      width:34px;
+      height:34px;
+      flex:0 0 34px;
       border-radius:999px;
       display:grid;
       place-items:center;
-      background:var(--green-soft);
-      color:var(--green-deep);
-      font-weight:900;
+      background:rgba(216,231,197,0.14);
+      color:var(--accent);
+      font-weight:800;
       margin-top:2px;
     }
 
-    .list-item strong{
+    .point strong{
       display:block;
       margin-bottom:4px;
       font-size:16px;
     }
 
-    .list-item span{
+    .point span{
+      display:block;
       color:var(--muted);
       font-size:15px;
     }
 
-    .quote-card{
-      border-radius:var(--radius-xl);
-      padding:36px;
-      background:
-        linear-gradient(135deg, rgba(20,48,27,0.96), rgba(44,106,55,0.92)),
-        linear-gradient(135deg, #173019, #2c6a37);
-      color:#fff;
-      box-shadow: var(--shadow-lg);
-      overflow:hidden;
-      position:relative;
+    .quote-section{
+      padding-bottom:110px;
     }
 
-    .quote-card::after{
+    .quote-card{
+      position:relative;
+      overflow:hidden;
+      padding:44px;
+      border-radius:34px;
+      background:
+        linear-gradient(135deg, rgba(216,231,197,0.10), rgba(124,163,111,0.08)),
+        linear-gradient(180deg, #131b15 0%, #101611 100%);
+      border:1px solid rgba(216,231,197,0.12);
+      box-shadow:var(--shadow-lg);
+    }
+
+    .quote-card::before{
       content:"";
       position:absolute;
-      width:260px;
-      height:260px;
+      width:320px;
+      height:320px;
       border-radius:999px;
-      background:rgba(255,255,255,0.06);
-      right:-80px;
-      top:-80px;
+      right:-110px;
+      bottom:-130px;
+      background:radial-gradient(circle, rgba(216,231,197,0.10), transparent 68%);
       pointer-events:none;
     }
 
     .quote-card p{
-      color:rgba(255,255,255,0.85);
+      color:var(--muted);
+      font-size:17px;
       max-width:56ch;
-      margin-bottom:20px;
+      margin-bottom:22px;
     }
 
     .quote-actions{
       display:flex;
-      gap:12px;
       flex-wrap:wrap;
-    }
-
-    .quote-actions .btn-secondary{
-      background:rgba(255,255,255,0.12);
-      color:#fff;
-      border:1px solid rgba(255,255,255,0.14);
-    }
-
-    .final-cta{
-      padding-bottom:108px;
-    }
-
-    .final-card{
-      padding:36px;
-      border-radius:var(--radius-xl);
-      text-align:center;
-    }
-
-    .final-card p{
-      color:var(--muted);
-      max-width:58ch;
-      margin:0 auto 22px;
-    }
-
-    .final-actions{
-      display:flex;
-      justify-content:center;
       gap:12px;
-      flex-wrap:wrap;
     }
 
     .footer{
-      padding:24px 0 112px;
-      border-top:1px solid rgba(19,34,22,0.06);
+      padding:26px 0 112px;
+      border-top:1px solid var(--line-soft);
       color:var(--muted);
       font-size:14px;
     }
@@ -577,13 +630,12 @@
     .footer-inner{
       display:flex;
       justify-content:space-between;
-      align-items:flex-start;
       gap:16px;
       flex-wrap:wrap;
     }
 
     .footer strong{
-      color:var(--text);
+      color:var(--white);
     }
 
     .sticky-bar{
@@ -593,10 +645,10 @@
       bottom:0;
       z-index:1100;
       padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-      background:rgba(243,245,241,0.86);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-top:1px solid rgba(19,34,22,0.08);
+      background:rgba(10,14,11,0.84);
+      border-top:1px solid var(--line);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     .sticky-inner{
@@ -613,26 +665,24 @@
     }
 
     @media (max-width: 1080px){
-      .hero-grid{
+      .hero-shell,
+      .showcase,
+      .split{
         grid-template-columns:1fr;
       }
 
       .hero-media{
         min-height:420px;
       }
+
+      .showcase-main{
+        min-height:420px;
+      }
     }
 
     @media (max-width: 980px){
-      .cards{
+      .services-grid{
         grid-template-columns:repeat(2,1fr);
-      }
-
-      .gallery{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .split{
-        grid-template-columns:1fr;
       }
 
       .nav-links{
@@ -645,11 +695,9 @@
         width:min(calc(100% - 20px), var(--max));
       }
 
-      .topbar{
-        font-size:13px;
-      }
-
-      .topbar-inner{
+      .topbar-inner,
+      .footer-inner{
+        flex-direction:column;
         align-items:flex-start;
       }
 
@@ -657,30 +705,19 @@
         padding:14px 0;
       }
 
-      .brand-copy span{
-        font-size:15px;
-      }
-
-      .hero{
-        padding-top:18px;
-      }
-
       .hero-copy{
-        padding:28px 22px;
-      }
-
-      .hero-copy p{
-        font-size:16px;
+        padding:30px 22px;
       }
 
       .hero-media{
         min-height:340px;
       }
 
-      .hero-panel{
-        left:12px;
-        right:12px;
-        bottom:12px;
+      .hero-card{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:16px;
         border-radius:18px;
       }
 
@@ -689,53 +726,39 @@
         align-items:flex-start;
       }
 
-      .cards,
-      .gallery{
+      .services-grid{
         grid-template-columns:1fr;
       }
 
-      .card,
-      .copy-block,
-      .list-item{
-        padding:20px;
+      .showcase-stack{
+        grid-template-rows:auto;
       }
 
-      .quote-card,
-      .final-card{
+      .showcase-stack .item{
+        min-height:240px;
+      }
+
+      .copy-panel,
+      .quote-card{
         padding:28px 20px;
-      }
-
-      .footer-inner{
-        flex-direction:column;
-      }
-
-      .sticky-inner{
-        grid-template-columns:1fr 1fr;
       }
     }
 
     @media (max-width: 480px){
       .hero-actions,
-      .quote-actions,
-      .final-actions{
+      .quote-actions{
         display:grid;
         grid-template-columns:1fr;
       }
 
       .hero-actions .btn,
-      .quote-actions .btn,
-      .final-actions .btn{
+      .quote-actions .btn{
         width:100%;
       }
 
-      .sticky-inner{
-        grid-template-columns:1fr 1fr;
-      }
-
       .sticky-inner .btn{
-        padding:14px 10px;
-        min-height:54px;
         font-size:15px;
+        padding:14px 10px;
       }
     }
   </style>
@@ -744,7 +767,7 @@
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <div>Peterborough, Ontario Property Maintenance</div>
+      <div>Peterborough, Ontario • Property Maintenance</div>
       <div class="topbar-links">
         <a href="tel:17057724204">(705) 772-4204</a>
         <a href="mailto:paradispropertymaintenance@gmail.com">paradispropertymaintenance@gmail.com</a>
@@ -765,9 +788,9 @@
 
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
-        <a href="#why">Why Choose Us</a>
-        <a href="#quote">Get a Quote</a>
+        <a href="#work">Work</a>
+        <a href="#why">Why Us</a>
+        <a href="#quote">Quote</a>
       </nav>
 
       <a class="btn btn-primary" href="tel:17057724204">Call Now</a>
@@ -776,14 +799,14 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy glass">
-          <div class="eyebrow">Local • Clean Work • Fast Quotes</div>
-          <h1>Property Maintenance That Looks Professional</h1>
+      <div class="container hero-shell">
+        <div class="hero-copy">
+          <div class="eyebrow">Premium Local Service</div>
+          <h1>Property Maintenance With a Cleaner Standard</h1>
           <p>
-            Paradis Property Maintenance delivers clean grass cutting, sharp lawn striping,
-            seasonal cleanup, and dependable outdoor property work in Peterborough.
-            Built for homeowners who want quality results and easy communication.
+            Paradis Property Maintenance delivers sharp lawn striping, clean grass cutting,
+            seasonal cleanup, and dependable outdoor property work for homeowners in Peterborough.
+            Built to feel polished, easy to contact, and worth calling.
           </p>
 
           <div class="hero-actions">
@@ -791,18 +814,18 @@
             <a class="btn btn-secondary" href="sms:17057724204">Text for a Quote</a>
           </div>
 
-          <div class="micro-trust">
-            <span>✓ Real local work</span>
-            <span>✓ Mobile-friendly quotes</span>
-            <span>✓ Easy call or text contact</span>
+          <div class="hero-trust">
+            <div class="pill">Real local work</div>
+            <div class="pill">Fast quote response</div>
+            <div class="pill">Mobile-friendly contact</div>
           </div>
         </div>
 
-        <div class="hero-media glass">
-          <img src="images/hero.jpg" alt="Fresh striped lawn by Paradis Property Maintenance" />
-          <div class="hero-panel">
-            <strong>Clean Cuts. Sharp Stripes. Reliable Service.</strong>
-            <span>Use a strong real photo from the Paradis Instagram page here.</span>
+        <div class="hero-media">
+          <img src="images/hero.jpg" alt="Premium striped lawn by Paradis Property Maintenance" />
+          <div class="hero-card">
+            <strong>Clean cuts. Sharp stripes. Professional presentation.</strong>
+            <span>Use the strongest real Paradis image here — ideally a high-end striped lawn or best finished property shot.</span>
           </div>
         </div>
       </div>
@@ -813,46 +836,37 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Services</div>
-            <h2>Outdoor Property Work That’s Easy to Book</h2>
+            <h2>Focused Services. Premium First Impression.</h2>
           </div>
           <p>
-            Keep the offer simple, clear, and visual. This page is designed to turn visitors
-            into phone calls and text-message quote requests.
+            This page should feel selective, not overloaded. Keep the offer tight, premium,
+            and centered around the work people already associate with the brand.
           </p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="icon">🌿</div>
+        <div class="services-grid">
+          <article class="service">
+            <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
-            <p>
-              Routine lawn care that keeps residential properties looking clean, maintained,
-              and professionally finished.
-            </p>
+            <p>Consistent lawn maintenance with a clean, polished finish that keeps the whole property looking cared for.</p>
           </article>
 
-          <article class="card">
-            <div class="icon">✅</div>
+          <article class="service">
+            <div class="service-icon">✅</div>
             <h3>Lawn Striping</h3>
-            <p>
-              Crisp, visible striping that gives the property a sharp, standout appearance.
-            </p>
+            <p>Sharp visible striping that adds curb appeal and gives the lawn a professional look.</p>
           </article>
 
-          <article class="card">
-            <div class="icon">🧹</div>
+          <article class="service">
+            <div class="service-icon">🧹</div>
             <h3>Property Cleanup</h3>
-            <p>
-              Outdoor cleanup work that helps bring the whole space back under control.
-            </p>
+            <p>Outdoor cleanup work that helps reset the appearance of the property quickly and professionally.</p>
           </article>
 
-          <article class="card">
-            <div class="icon">🍂</div>
+          <article class="service">
+            <div class="service-icon">🍂</div>
             <h3>Seasonal Maintenance</h3>
-            <p>
-              Seasonal outdoor work to keep your property looking polished throughout the year.
-            </p>
+            <p>Seasonal outdoor services designed to keep residential properties neat and presentable throughout the year.</p>
           </article>
         </div>
       </div>
@@ -862,40 +876,123 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Our Work</div>
-            <h2>Real Work. Real Results.</h2>
+            <div class="eyebrow">Selected Work</div>
+            <h2>The Work Should Sell the Page</h2>
           </div>
           <p>
-            Use real images from Paradis Property Maintenance only. The gallery should do most
-            of the selling by showing clean finishes and consistent field work.
+            This section is where the premium feel really happens. Use strong real photos only.
+            Skip weak or cluttered images and choose the cleanest finished results.
           </p>
         </div>
 
-        <div class="gallery-shell glass">
-          <div class="gallery">
-            <figure>
-              <img src="images/work-1.jpg" alt="Striped lawn completed by Paradis Property Maintenance" />
-              <div class="gallery-tag">Striped Lawn</div>
-            </figure>
+        <div class="showcase">
+          <div class="showcase-main">
+            <img src="images/work-feature.jpg" alt="Featured lawn result by Paradis Property Maintenance" />
+            <div class="showcase-label">Featured Result</div>
+          </div>
 
-            <figure>
+          <div class="showcase-stack">
+            <div class="item">
+              <img src="images/work-1.jpg" alt="Striped lawn by Paradis Property Maintenance" />
+              <div class="showcase-label">Striped Lawn</div>
+            </div>
+            <div class="item">
               <img src="images/work-2.jpg" alt="Property maintenance work by Paradis Property Maintenance" />
-              <div class="gallery-tag">Property Maintenance</div>
-            </figure>
+              <div class="showcase-label">Clean Finish</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <figure>
-              <img src="images/work-3.jpg" alt="Fresh grass cutting work by Paradis Property Maintenance" />
-              <div class="gallery-tag">Grass Cutting</div>
-            </figure>
+    <section id="why">
+      <div class="container split">
+        <div class="copy-panel">
+          <div class="eyebrow">Why Choose Paradis</div>
+          <h2>Built Around Trust, Not Clutter</h2>
+          <p>
+            Premium does not mean flashy. It means the site feels intentional, the work looks strong,
+            and the contact path is clear. This layout is designed to make Paradis feel established,
+            polished, and easy to hire.
+          </p>
+        </div>
 
-            <figure>
-              <img src="images/work-4.jpg" alt="Outdoor cleanup work by Paradis Property Maintenance" />
-              <div class="gallery-tag">Cleanup</div>
-            </figure>
+        <div class="points">
+          <div class="point">
+            <div class="point-mark">✓</div>
+            <div>
+              <strong>Stronger visual positioning</strong>
+              <span>The darker palette and cleaner spacing create a more upscale, professional look.</span>
+            </div>
+          </div>
 
-            <figure>
-              <img src="images/work-5.jpg" alt="Finished lawn stripes by Paradis Property Maintenance" />
-              <div class="gallery-tag">Clean Finish</div>
-            </figure>
+          <div class="point">
+            <div class="point-mark">✓</div>
+            <div>
+              <strong>Real jobsite proof</strong>
+              <span>The best Paradis images should do most of the convincing without heavy sales copy.</span>
+            </div>
+          </div>
 
-            <figure>
+          <div class="point">
+            <div class="point-mark">✓</div>
+            <div>
+              <strong>Simple call and text conversion</strong>
+              <span>People can contact the business immediately from any device without friction.</span>
+            </div>
+          </div>
+
+          <div class="point">
+            <div class="point-mark">✓</div>
+            <div>
+              <strong>Mobile and desktop friendly</strong>
+              <span>The layout stacks cleanly and keeps the main quote actions visible on smaller screens.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="quote-section">
+      <div class="container">
+        <div class="quote-card">
+          <div class="eyebrow">Get a Quote</div>
+          <h2>Need Property Maintenance Work Done?</h2>
+          <p>
+            Call or text Paradis Property Maintenance for a quote. The page is designed to make
+            the next step obvious: see the work, trust the brand, and reach out.
+          </p>
+
+          <div class="quote-actions">
+            <a class="btn btn-primary" href="tel:17057724204">Call (705) 772-4204</a>
+            <a class="btn btn-secondary" href="sms:17057724204">Text for a Quote</a>
+            <a class="btn btn-secondary" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Paradis Property Maintenance</strong><br />
+        Peterborough, Ontario<br />
+        <a href="tel:17057724204">(705) 772-4204</a>
+      </div>
+
+      <div>
+        <a href="mailto:paradispropertymaintenance@gmail.com">paradispropertymaintenance@gmail.com</a><br />
+        <a href="https://www.instagram.com/paradispropertymaintenance/" target="_blank" rel="noopener noreferrer">@paradispropertymaintenance</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-bar" aria-label="Quick contact actions">
+    <div class="sticky-inner">
+      <a class="btn btn-primary btn-full" href="tel:17057724204">Call Now</a>
+      <a class="btn btn-secondary btn-full" href="sms:17057724204">Text Quote</a>
+    </div>
+  </div>
+</body>
+</html>
