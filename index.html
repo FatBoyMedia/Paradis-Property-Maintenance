@@ -69,27 +69,22 @@
       margin:0 auto;
     }
 
-    .topbar{
-      background:var(--charcoal);
-      color:rgba(255,255,255,0.90);
-      font-size:13px;
-      border-bottom:1px solid rgba(255,255,255,0.06);
+    .logo-banner{
+      width:100%;
+      background:var(--white);
+      border-bottom:1px solid var(--line-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
     }
 
-    .topbar-inner{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:14px;
-      flex-wrap:wrap;
-      padding:9px 0;
-    }
-
-    .topbar-links{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      align-items:center;
+    .logo-banner img{
+      width:100%;
+      max-width:860px;
+      height:auto;
+      object-fit:contain;
+      display:block;
     }
 
     .site-header{
@@ -115,23 +110,6 @@
       align-items:center;
       gap:12px;
       min-width:0;
-    }
-
-    .brand-mark{
-      width:56px;
-      height:56px;
-      border-radius:18px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 14px 30px rgba(197,22,39,0.16);
-      border:1px solid rgba(197,22,39,0.10);
-      flex:0 0 auto;
-    }
-
-    .brand-mark img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
     }
 
     .brand-copy{
@@ -641,29 +619,9 @@
         width:min(calc(100% - 16px), var(--max));
       }
 
-      .topbar{
-        display:none;
-      }
-
-      .topbar-inner,
-      .footer-inner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
       .nav{
         padding:10px 0;
         gap:10px;
-      }
-
-      .brand{
-        gap:10px;
-      }
-
-      .brand-mark{
-        width:48px;
-        height:48px;
-        border-radius:14px;
       }
 
       .brand-copy span{
@@ -679,6 +637,14 @@
         min-height:46px;
         padding:10px 14px;
         font-size:14px;
+      }
+
+      .logo-banner{
+        padding:10px 14px;
+      }
+
+      .logo-banner img{
+        max-width:100%;
       }
 
       .hero{
@@ -776,6 +742,11 @@
       .footer{
         padding:20px 0 96px;
       }
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
     }
 
     @media (max-width: 480px){
@@ -802,23 +773,13 @@
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div>Peterborough, Ontario • Property Maintenance</div>
-      <div class="topbar-links">
-        <a href="tel:17057724204">(705) 772-4204</a>
-        <a href="mailto:paradispropertymaintenance@gmail.com">paradispropertymaintenance@gmail.com</a>
-        <a href="https://www.instagram.com/paradispropertymaintenance/" target="_blank" rel="noopener noreferrer">@paradispropertymaintenance</a>
-      </div>
-    </div>
+  <div class="logo-banner" aria-label="Paradis Property Maintenance banner">
+    <img src="images/logo.png" alt="Paradis Property Maintenance logo banner" />
   </div>
 
   <header class="site-header">
     <div class="container nav">
       <a href="#" class="brand" aria-label="Paradis Property Maintenance home">
-        <div class="brand-mark">
-          <img src="images/logo.png" alt="Paradis Property Maintenance logo" />
-        </div>
         <div class="brand-copy">
           <span>Paradis Property Maintenance</span>
           <small>Peterborough, Ontario</small>
