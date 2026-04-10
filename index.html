@@ -34,15 +34,15 @@
       --red:#c51627;
       --red-deep:#8d101b;
       --red-soft:#fff1f3;
-      --shadow-xl:0 34px 90px rgba(0,0,0,0.14);
-      --shadow-lg:0 20px 50px rgba(0,0,0,0.10);
-      --shadow-md:0 12px 30px rgba(0,0,0,0.08);
-      --shadow-sm:0 6px 18px rgba(0,0,0,0.06);
-      --radius-xxl:42px;
-      --radius-xl:32px;
-      --radius-lg:24px;
-      --radius-md:18px;
-      --max:1260px;
+      --shadow-xl:0 24px 70px rgba(0,0,0,0.12);
+      --shadow-lg:0 16px 42px rgba(0,0,0,0.09);
+      --shadow-md:0 10px 26px rgba(0,0,0,0.07);
+      --shadow-sm:0 5px 16px rgba(0,0,0,0.05);
+      --radius-xxl:38px;
+      --radius-xl:28px;
+      --radius-lg:22px;
+      --radius-md:16px;
+      --max:1240px;
     }
 
     *{ box-sizing:border-box; }
@@ -65,7 +65,7 @@
     a{ color:inherit; text-decoration:none; }
 
     .container{
-      width:min(calc(100% - 32px), var(--max));
+      width:min(calc(100% - 24px), var(--max));
       margin:0 auto;
     }
 
@@ -80,14 +80,14 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:16px;
+      gap:14px;
       flex-wrap:wrap;
-      padding:10px 0;
+      padding:9px 0;
     }
 
     .topbar-links{
       display:flex;
-      gap:18px;
+      gap:16px;
       flex-wrap:wrap;
       align-items:center;
     }
@@ -106,26 +106,26 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:20px;
-      padding:18px 0;
+      gap:18px;
+      padding:14px 0;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:12px;
       min-width:0;
     }
 
     .brand-mark{
-      width:58px;
-      height:58px;
+      width:56px;
+      height:56px;
       border-radius:18px;
       overflow:hidden;
       background:#fff;
-      box-shadow:0 16px 36px rgba(197,22,39,0.18);
-      flex:0 0 auto;
+      box-shadow:0 14px 30px rgba(197,22,39,0.16);
       border:1px solid rgba(197,22,39,0.10);
+      flex:0 0 auto;
     }
 
     .brand-mark img{
@@ -154,14 +154,14 @@
       color:var(--muted-2);
       font-size:11px;
       font-weight:800;
-      letter-spacing:1.1px;
+      letter-spacing:1px;
       text-transform:uppercase;
     }
 
     .nav-links{
       display:flex;
       align-items:center;
-      gap:28px;
+      gap:22px;
     }
 
     .nav-links a{
@@ -178,14 +178,14 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      min-height:56px;
-      padding:15px 22px;
+      min-height:52px;
+      padding:14px 20px;
       border:none;
       border-radius:999px;
       font-weight:800;
       text-align:center;
       cursor:pointer;
-      transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+      transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
     }
 
     .btn:hover{ transform:translateY(-1px); }
@@ -193,15 +193,15 @@
     .btn-primary{
       background:linear-gradient(135deg, var(--red), var(--red-deep));
       color:#fff;
-      box-shadow:0 16px 36px rgba(197,22,39,0.24);
+      box-shadow:0 14px 30px rgba(197,22,39,0.22);
     }
 
     .btn-primary:hover{
-      box-shadow:0 22px 48px rgba(197,22,39,0.30);
+      box-shadow:0 18px 38px rgba(197,22,39,0.28);
     }
 
     .btn-secondary{
-      background:rgba(255,255,255,0.94);
+      background:rgba(255,255,255,0.96);
       color:var(--charcoal);
       border:1px solid var(--line);
       box-shadow:var(--shadow-sm);
@@ -229,7 +229,7 @@
       align-items:center;
       gap:8px;
       width:max-content;
-      padding:9px 14px;
+      padding:8px 13px;
       border-radius:999px;
       background:var(--red-soft);
       color:var(--red);
@@ -238,101 +238,42 @@
       font-size:11px;
       letter-spacing:1px;
       font-weight:900;
-      margin-bottom:18px;
+      margin-bottom:14px;
     }
 
     h1,h2,h3{
-      margin:0 0 14px;
+      margin:0 0 12px;
       line-height:1.02;
       letter-spacing:-0.04em;
     }
 
     h1{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(54px, 8vw, 108px);
+      font-size:clamp(50px, 7vw, 88px);
       font-weight:700;
-      max-width:8.8ch;
+      max-width:8ch;
     }
 
     h2{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(36px, 5vw, 64px);
+      font-size:clamp(32px, 4.7vw, 56px);
       font-weight:700;
     }
 
     h3{
-      font-size:22px;
+      font-size:20px;
       font-weight:800;
     }
 
     p{ margin:0; }
 
-    .profile-strip{
-      padding:20px 0 0;
-    }
-
-    .profile-card{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      background:rgba(255,255,255,0.94);
-      border:1px solid var(--line-soft);
-      border-radius:28px;
-      padding:18px;
-      box-shadow:var(--shadow-md);
-    }
-
-    .profile-left{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      min-width:0;
-      flex:1;
-    }
-
-    .profile-logo{
-      width:76px;
-      height:76px;
-      border-radius:22px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 12px 26px rgba(197,22,39,0.14);
-      border:1px solid rgba(197,22,39,0.08);
-      flex:0 0 auto;
-    }
-
-    .profile-logo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .profile-copy{
-      min-width:0;
-    }
-
-    .profile-copy h3{
-      margin:0 0 6px;
-      font-size:26px;
-      line-height:1;
-    }
-
-    .profile-copy p{
-      color:var(--muted-2);
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:1.5px;
-      text-transform:uppercase;
-    }
-
     .hero{
-      padding:20px 0 24px;
+      padding:18px 0 18px;
     }
 
     .hero-shell{
       position:relative;
-      min-height:840px;
+      min-height:640px;
       border-radius:var(--radius-xxl);
       overflow:hidden;
       box-shadow:var(--shadow-xl);
@@ -355,7 +296,7 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(90deg, rgba(23,23,23,0.58) 0%, rgba(23,23,23,0.28) 44%, rgba(23,23,23,0.12) 100%);
+        linear-gradient(90deg, rgba(23,23,23,0.60) 0%, rgba(23,23,23,0.26) 48%, rgba(23,23,23,0.10) 100%);
       pointer-events:none;
     }
 
@@ -364,84 +305,83 @@
       z-index:2;
       display:flex;
       align-items:flex-end;
-      min-height:840px;
-      padding:58px;
+      min-height:640px;
+      padding:34px;
     }
 
     .hero-panel{
-      max-width:680px;
-      background:rgba(255,255,255,0.88);
+      max-width:650px;
+      background:rgba(255,255,255,0.90);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      border:1px solid rgba(255,255,255,0.70);
-      border-radius:36px;
-      padding:34px 34px 30px;
+      border:1px solid rgba(255,255,255,0.72);
+      border-radius:30px;
+      padding:28px 28px 24px;
       box-shadow:var(--shadow-lg);
     }
 
     .hero-panel p{
-      font-size:18px;
+      font-size:17px;
       color:var(--muted);
-      max-width:56ch;
-      margin:0 0 24px;
+      max-width:52ch;
+      margin:0 0 20px;
     }
 
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
-      gap:12px;
-      margin-bottom:18px;
+      gap:10px;
+      margin-bottom:14px;
     }
 
     .hero-trust{
       display:flex;
       flex-wrap:wrap;
-      gap:10px 12px;
+      gap:8px;
     }
 
     .trust-pill{
       display:inline-flex;
       align-items:center;
-      gap:8px;
-      padding:10px 13px;
+      padding:9px 12px;
       border-radius:999px;
-      background:rgba(255,255,255,0.86);
+      background:rgba(255,255,255,0.88);
       border:1px solid rgba(23,23,23,0.06);
       color:var(--muted);
-      font-size:14px;
+      font-size:13px;
       font-weight:700;
     }
 
     .floating{
       position:relative;
       z-index:3;
-      margin-top:-84px;
+      margin-top:-42px;
     }
 
     .floating-grid{
       display:grid;
-      grid-template-columns:1.15fr .9fr .9fr;
-      gap:18px;
+      grid-template-columns:1.2fr .9fr .9fr;
+      gap:14px;
     }
 
     .floating-box{
       background:var(--white);
       border:1px solid var(--line-soft);
-      border-radius:28px;
-      padding:26px;
-      box-shadow:var(--shadow-lg);
+      border-radius:24px;
+      padding:20px;
+      box-shadow:var(--shadow-md);
     }
 
     .floating-box strong{
       display:block;
-      font-size:16px;
-      margin-bottom:6px;
+      font-size:15px;
+      margin-bottom:5px;
     }
 
     .floating-box span{
       display:block;
       color:var(--muted);
-      font-size:15px;
+      font-size:14px;
     }
 
     .floating-box.featured{
@@ -451,78 +391,78 @@
     }
 
     .floating-box.featured span{
-      color:rgba(255,255,255,0.88);
+      color:rgba(255,255,255,0.90);
     }
 
     .section{
-      padding:74px 0 0;
+      padding:54px 0 0;
     }
 
     .section-head{
       display:flex;
       justify-content:space-between;
       align-items:end;
-      gap:24px;
-      margin-bottom:24px;
+      gap:20px;
+      margin-bottom:18px;
     }
 
     .section-head p{
-      max-width:56ch;
+      max-width:52ch;
       color:var(--muted);
-      font-size:16px;
+      font-size:15px;
     }
 
     .services-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
-      gap:18px;
+      gap:14px;
     }
 
     .service{
       background:var(--white);
       border:1px solid var(--line-soft);
-      border-radius:30px;
-      padding:30px;
+      border-radius:24px;
+      padding:22px;
       box-shadow:var(--shadow-sm);
       transition:.2s ease;
     }
 
     .service:hover{
-      transform:translateY(-4px);
+      transform:translateY(-3px);
       box-shadow:var(--shadow-md);
     }
 
     .service-icon{
-      width:58px;
-      height:58px;
-      border-radius:18px;
+      width:52px;
+      height:52px;
+      border-radius:16px;
       display:grid;
       place-items:center;
-      font-size:24px;
+      font-size:22px;
       background:var(--red-soft);
       color:var(--red);
-      margin-bottom:18px;
+      margin-bottom:14px;
     }
 
     .service p{
       color:var(--muted);
-      font-size:15px;
+      font-size:14px;
     }
 
     .services-list{
-      margin-top:22px;
+      margin-top:16px;
       background:var(--white);
       border:1px solid var(--line-soft);
-      border-radius:30px;
-      padding:30px;
+      border-radius:24px;
+      padding:24px;
       box-shadow:var(--shadow-sm);
     }
 
     .services-list-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:16px;
+      gap:16px;
+      margin-top:12px;
     }
 
     .services-list ul{
@@ -532,41 +472,41 @@
 
     .services-list li{
       color:var(--muted);
-      margin-bottom:10px;
-      font-size:15px;
+      margin-bottom:8px;
+      font-size:14px;
     }
 
     .special-banner{
-      margin-top:22px;
+      margin-top:16px;
       background:linear-gradient(135deg, var(--charcoal), var(--charcoal-2));
       color:#fff;
-      border-radius:30px;
-      padding:28px;
+      border-radius:24px;
+      padding:24px;
       box-shadow:var(--shadow-lg);
     }
 
     .special-banner p{
-      color:rgba(255,255,255,0.86);
-      font-size:16px;
+      color:rgba(255,255,255,0.88);
+      font-size:15px;
     }
 
     .work{
-      padding:74px 0 0;
+      padding:54px 0 0;
     }
 
     .work-grid{
       display:grid;
       grid-template-columns:1.08fr .92fr;
-      gap:22px;
+      gap:16px;
       align-items:stretch;
     }
 
     .work-feature{
       position:relative;
-      min-height:760px;
-      border-radius:36px;
+      min-height:500px;
+      border-radius:28px;
       overflow:hidden;
-      box-shadow:var(--shadow-xl);
+      box-shadow:var(--shadow-lg);
       background:#ddd;
     }
 
@@ -582,35 +522,35 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, rgba(23,23,23,0.04), rgba(23,23,23,0.24));
+      background:linear-gradient(180deg, rgba(23,23,23,0.02), rgba(23,23,23,0.22));
       pointer-events:none;
     }
 
     .work-stack{
       display:grid;
       grid-template-rows:1fr 1fr;
-      gap:22px;
+      gap:16px;
     }
 
     .work-small{
       position:relative;
-      min-height:369px;
-      border-radius:32px;
+      min-height:242px;
+      border-radius:24px;
       overflow:hidden;
-      box-shadow:var(--shadow-lg);
+      box-shadow:var(--shadow-md);
       background:#ddd;
     }
 
     .image-label{
       position:absolute;
-      left:18px;
-      bottom:18px;
+      left:14px;
+      bottom:14px;
       z-index:2;
-      padding:10px 13px;
+      padding:9px 12px;
       border-radius:999px;
-      background:rgba(255,255,255,0.90);
+      background:rgba(255,255,255,0.92);
       color:var(--charcoal);
-      font-size:12px;
+      font-size:11px;
       font-weight:900;
       letter-spacing:.7px;
       text-transform:uppercase;
@@ -618,49 +558,49 @@
     }
 
     .authority{
-      padding:74px 0 0;
+      padding:54px 0 0;
     }
 
     .authority-grid{
       display:grid;
       grid-template-columns:.92fr 1.08fr;
-      gap:22px;
+      gap:16px;
       align-items:start;
     }
 
     .authority-copy{
       background:var(--white);
-      border-radius:34px;
-      padding:38px;
+      border-radius:28px;
+      padding:28px;
       border:1px solid var(--line-soft);
       box-shadow:var(--shadow-sm);
     }
 
     .authority-copy p{
       color:var(--muted);
-      font-size:16px;
+      font-size:15px;
     }
 
     .points{
       display:grid;
-      gap:16px;
+      gap:12px;
     }
 
     .point{
       display:flex;
-      gap:14px;
+      gap:12px;
       align-items:flex-start;
-      padding:22px;
-      border-radius:26px;
+      padding:18px;
+      border-radius:22px;
       background:var(--white);
       border:1px solid var(--line-soft);
       box-shadow:var(--shadow-sm);
     }
 
     .point-mark{
-      width:38px;
-      height:38px;
-      flex:0 0 38px;
+      width:34px;
+      height:34px;
+      flex:0 0 34px;
       border-radius:999px;
       display:grid;
       place-items:center;
@@ -673,41 +613,196 @@
     .point strong{
       display:block;
       margin-bottom:4px;
-      font-size:16px;
+      font-size:15px;
     }
 
     .point span{
       display:block;
       color:var(--muted);
+      font-size:14px;
+    }
+
+    .reviews{
+      padding:54px 0 0;
+    }
+
+    .reviews-shell{
+      background:linear-gradient(135deg, rgba(255,255,255,0.98), rgba(255,255,255,0.94));
+      border:1px solid var(--line-soft);
+      border-radius:30px;
+      padding:26px;
+      box-shadow:var(--shadow-md);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .reviews-shell::after{
+      content:"";
+      position:absolute;
+      width:260px;
+      height:260px;
+      right:-110px;
+      top:-110px;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(197,22,39,0.07), transparent 68%);
+      pointer-events:none;
+    }
+
+    .reviews-top{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .reviews-score{
+      text-align:right;
+    }
+
+    .reviews-score strong{
+      display:block;
+      font-size:34px;
+      line-height:1;
+      margin-bottom:4px;
+    }
+
+    .reviews-score span{
+      color:var(--muted);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .stars{
+      color:var(--red);
+      font-size:18px;
+      letter-spacing:2px;
+      margin-bottom:6px;
+    }
+
+    .review-stage{
+      position:relative;
+      z-index:2;
+      min-height:174px;
+    }
+
+    .review{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transform:translateY(12px);
+      transition:opacity .5s ease, transform .5s ease;
+      pointer-events:none;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:14px;
+    }
+
+    .review.active{
+      opacity:1;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+
+    .review-main,
+    .review-side{
+      background:#fbfbfb;
+      border:1px solid var(--line-soft);
+      border-radius:22px;
+      padding:20px;
+    }
+
+    .review-main blockquote{
+      margin:0;
+      font-size:17px;
+      line-height:1.55;
+      color:var(--charcoal);
+      font-weight:600;
+    }
+
+    .review-meta strong,
+    .review-side strong{
+      display:block;
       font-size:15px;
+      margin-bottom:6px;
+    }
+
+    .review-meta span,
+    .review-side p{
+      display:block;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .review-side{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .review-dots{
+      position:relative;
+      z-index:2;
+      display:flex;
+      gap:8px;
+      margin-top:18px;
+      align-items:center;
+    }
+
+    .review-dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      border:none;
+      background:rgba(23,23,23,0.14);
+      cursor:pointer;
+      transition:.2s ease;
+      padding:0;
+    }
+
+    .review-dot.active{
+      width:28px;
+      background:linear-gradient(135deg, var(--red), var(--red-deep));
+    }
+
+    .review-actions{
+      position:relative;
+      z-index:2;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
     }
 
     .business{
-      padding:74px 0 0;
+      padding:54px 0 0;
     }
 
     .business-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:18px;
+      gap:14px;
     }
 
     .business-card{
       background:var(--white);
       border:1px solid var(--line-soft);
-      border-radius:28px;
-      padding:28px;
+      border-radius:24px;
+      padding:22px;
       box-shadow:var(--shadow-sm);
     }
 
     .business-card h3{
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
     .business-card p,
     .business-card li{
       color:var(--muted);
-      font-size:15px;
+      font-size:14px;
     }
 
     .business-card ul{
@@ -716,48 +811,48 @@
     }
 
     .quote{
-      padding:74px 0 120px;
+      padding:54px 0 108px;
     }
 
     .quote-card{
       position:relative;
       overflow:hidden;
       background:
-        linear-gradient(135deg, rgba(197,22,39,0.06), rgba(197,22,39,0.02)),
+        linear-gradient(135deg, rgba(197,22,39,0.07), rgba(197,22,39,0.02)),
         var(--white);
       border:1px solid rgba(197,22,39,0.08);
-      border-radius:40px;
-      box-shadow:var(--shadow-xl);
-      padding:50px;
+      border-radius:32px;
+      box-shadow:var(--shadow-lg);
+      padding:34px;
     }
 
     .quote-card::after{
       content:"";
       position:absolute;
-      width:320px;
-      height:320px;
+      width:260px;
+      height:260px;
       border-radius:999px;
       background:radial-gradient(circle, rgba(197,22,39,0.08), transparent 68%);
-      top:-100px;
-      right:-100px;
+      top:-90px;
+      right:-90px;
       pointer-events:none;
     }
 
     .quote-card p{
       color:var(--muted);
-      font-size:17px;
-      max-width:58ch;
-      margin-bottom:24px;
+      font-size:16px;
+      max-width:56ch;
+      margin-bottom:20px;
     }
 
     .quote-actions{
       display:flex;
       flex-wrap:wrap;
-      gap:12px;
+      gap:10px;
     }
 
     .footer{
-      padding:24px 0 112px;
+      padding:22px 0 100px;
       border-top:1px solid var(--line-soft);
       color:var(--muted);
       font-size:14px;
@@ -794,7 +889,7 @@
     }
 
     .sticky-inner .btn{
-      min-height:56px;
+      min-height:54px;
       font-size:16px;
     }
 
@@ -807,13 +902,17 @@
         grid-template-columns:1fr;
       }
 
+      .review{
+        grid-template-columns:1fr;
+      }
+
       .hero-shell,
       .hero-content{
-        min-height:680px;
+        min-height:560px;
       }
 
       .work-feature{
-        min-height:460px;
+        min-height:420px;
       }
 
       .work-stack{
@@ -821,6 +920,10 @@
       }
 
       .work-small{
+        min-height:220px;
+      }
+
+      .review-stage{
         min-height:260px;
       }
     }
@@ -837,27 +940,31 @@
 
     @media (max-width: 720px){
       .container{
-        width:min(calc(100% - 20px), var(--max));
+        width:min(calc(100% - 18px), var(--max));
       }
 
       .topbar-inner,
       .footer-inner,
-      .profile-card{
+      .reviews-top{
         flex-direction:column;
         align-items:flex-start;
       }
 
+      .reviews-score{
+        text-align:left;
+      }
+
       .nav{
-        padding:14px 0;
+        padding:12px 0;
       }
 
       .hero-shell,
       .hero-content{
-        min-height:520px;
+        min-height:480px;
       }
 
       .hero-content{
-        padding:16px;
+        padding:14px;
         align-items:flex-end;
       }
 
@@ -867,11 +974,11 @@
       }
 
       .hero-panel p{
-        font-size:16px;
+        font-size:15px;
       }
 
       .floating{
-        margin-top:-30px;
+        margin-top:-20px;
       }
 
       .section-head{
@@ -887,33 +994,32 @@
       .quote-card,
       .business-card,
       .services-list,
-      .special-banner{
-        padding:28px 20px;
+      .special-banner,
+      .reviews-shell{
+        padding:22px 18px;
       }
 
-      .profile-copy h3{
-        font-size:22px;
-      }
-
-      .profile-card .btn{
-        width:100%;
+      .review-stage{
+        min-height:300px;
       }
     }
 
     @media (max-width: 480px){
       .hero-actions,
-      .quote-actions{
+      .quote-actions,
+      .review-actions{
         display:grid;
         grid-template-columns:1fr;
       }
 
       .hero-actions .btn,
-      .quote-actions .btn{
+      .quote-actions .btn,
+      .review-actions .btn{
         width:100%;
       }
 
       h1{
-        font-size:58px;
+        font-size:54px;
       }
 
       .sticky-inner .btn{
@@ -923,6 +1029,10 @@
 
       .brand-copy small{
         letter-spacing:.8px;
+      }
+
+      .review-stage{
+        min-height:340px;
       }
     }
   </style>
@@ -955,7 +1065,7 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
-        <a href="#why">Why Us</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -964,25 +1074,6 @@
   </header>
 
   <main>
-    <section class="profile-strip">
-      <div class="container">
-        <div class="profile-card">
-          <div class="profile-left">
-            <div class="profile-logo">
-              <img src="images/logo.png" alt="Paradis Property Maintenance logo" />
-            </div>
-
-            <div class="profile-copy">
-              <h3>Paradis Property Maintenance</h3>
-              <p>Peterborough, Ontario</p>
-            </div>
-          </div>
-
-          <a class="btn btn-primary" href="tel:17057724204">Call Now</a>
-        </div>
-      </div>
-    </section>
-
     <section class="hero">
       <div class="container">
         <div class="hero-shell">
@@ -995,9 +1086,7 @@
               <div class="eyebrow">Premium Local Service</div>
               <h1>Property Maintenance Done Right</h1>
               <p>
-                Paradis Property Maintenance provides grass cutting, snow clearing, lawn care,
-                window cleaning, seasonal cleanups, and general property maintenance in Peterborough.
-                Reliable service, clean results, and easy quote requests by call or text.
+                Grass cutting, snow clearing, lawn care, cleanups, window cleaning, and dependable general property maintenance in Peterborough.
               </p>
 
               <div class="hero-actions">
@@ -1008,7 +1097,8 @@
               <div class="hero-trust">
                 <div class="trust-pill">Grass cutting</div>
                 <div class="trust-pill">Snow clearing</div>
-                <div class="trust-pill">General property maintenance</div>
+                <div class="trust-pill">Cleanups</div>
+                <div class="trust-pill">Property maintenance</div>
               </div>
             </div>
           </div>
@@ -1017,17 +1107,17 @@
         <div class="floating">
           <div class="floating-grid">
             <div class="floating-box featured">
-              <strong>Built around the services people actually call for.</strong>
-              <span>Grass cutting, snow clearing, cleanups, lawn care, and dependable property maintenance throughout Peterborough.</span>
+              <strong>Built around the services people actually need.</strong>
+              <span>Fast quotes, dependable work, and service throughout Peterborough and the surrounding area.</span>
             </div>
 
             <div class="floating-box">
-              <strong>Fast quote requests</strong>
-              <span>Call or text directly to ask about pricing, availability, or regular service.</span>
+              <strong>Quick contact</strong>
+              <span>Call or text directly for pricing, availability, and regular service.</span>
             </div>
 
             <div class="floating-box">
-              <strong>Free scrap metal pick up</strong>
+              <strong>Free scrap metal pickup</strong>
               <span>Available in the Peterborough area as an added local service.</span>
             </div>
           </div>
@@ -1040,11 +1130,10 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Main Services</div>
-            <h2>Professional Property Services in Peterborough</h2>
+            <h2>Professional Property Services</h2>
           </div>
           <p>
-            Paradis Property Maintenance focuses on dependable outdoor and seasonal services
-            that help keep residential properties clean, maintained, and looking their best.
+            Practical outdoor and seasonal services that help keep residential properties clean, safe, and looking their best.
           </p>
         </div>
 
@@ -1052,43 +1141,35 @@
           <article class="service">
             <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
-            <p>
-              Regular grass cutting and lawn maintenance for clean, sharp, well-kept properties.
-            </p>
+            <p>Regular grass cutting and lawn maintenance for clean, sharp, well-kept properties.</p>
           </article>
 
           <article class="service">
             <div class="service-icon">❄️</div>
             <h3>Snow Clearing</h3>
-            <p>
-              Reliable snow clearing service to help keep driveways, walkways, and outdoor areas accessible.
-            </p>
+            <p>Reliable clearing for driveways, walkways, and outdoor areas during winter conditions.</p>
           </article>
 
           <article class="service">
             <div class="service-icon">🧼</div>
             <h3>Window Cleaning</h3>
-            <p>
-              Window cleaning services to help improve the overall look and presentation of the property.
-            </p>
+            <p>Window cleaning that helps improve curb appeal and overall presentation.</p>
           </article>
 
           <article class="service">
             <div class="service-icon">🧹</div>
-            <h3>General Property Maintenance</h3>
-            <p>
-              Ongoing property upkeep, cleanup work, and general maintenance services throughout the season.
-            </p>
+            <h3>Property Maintenance</h3>
+            <p>General upkeep, cleanup work, and ongoing outdoor maintenance throughout the season.</p>
           </article>
         </div>
 
         <div class="services-list">
           <div class="eyebrow">Service List</div>
-          <h2 style="font-size:clamp(30px,4vw,50px);">What We Offer</h2>
+          <h2 style="font-size:clamp(28px,4vw,44px);">What We Offer</h2>
 
           <div class="services-list-grid">
             <div>
-              <h3 style="font-size:20px;">Lawn & Grass Services</h3>
+              <h3 style="font-size:18px;">Lawn & Grass</h3>
               <ul>
                 <li>Grass cutting</li>
                 <li>Aerating</li>
@@ -1098,7 +1179,7 @@
             </div>
 
             <div>
-              <h3 style="font-size:20px;">Yard & Garden Services</h3>
+              <h3 style="font-size:18px;">Yard & Garden</h3>
               <ul>
                 <li>Garden bed maintenance</li>
                 <li>Mulching</li>
@@ -1108,7 +1189,7 @@
             </div>
 
             <div>
-              <h3 style="font-size:20px;">Seasonal & Property Services</h3>
+              <h3 style="font-size:18px;">Seasonal Services</h3>
               <ul>
                 <li>Snow clearing</li>
                 <li>Spring cleanups</li>
@@ -1122,10 +1203,9 @@
 
         <div class="special-banner">
           <div class="eyebrow" style="background:rgba(255,255,255,0.10); color:#fff; border-color:rgba(255,255,255,0.10);">Peterborough Area</div>
-          <h2 style="color:#fff; font-size:clamp(30px,4vw,52px);">Free Scrap Metal Pick Up</h2>
+          <h2 style="color:#fff; font-size:clamp(28px,4vw,46px);">Free Scrap Metal Pick Up</h2>
           <p>
-            Paradis Property Maintenance also offers <strong style="color:#fff;">free scrap metal pick up in the Peterborough area</strong>.
-            Reach out by call or text to arrange pickup.
+            Paradis Property Maintenance also offers <strong style="color:#fff;">free scrap metal pick up in the Peterborough area</strong>. Reach out by call or text to arrange pickup.
           </p>
         </div>
       </div>
@@ -1136,9 +1216,10 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Selected Work</div>
-            <h2>Clean Work. Strong Presentation.</h2>
+            <h2>Clean Work. Strong Results.</h2>
           </div>
           <p>
+            Use your best real photos here to show the quality of your work at a glance.
           </p>
         </div>
 
@@ -1167,11 +1248,9 @@
         <div class="authority-grid">
           <div class="authority-copy">
             <div class="eyebrow">Why Choose Paradis</div>
-            <h2>Reliable Service With a Wide Range of Property Work</h2>
+            <h2>Reliable Service With Practical Property Solutions</h2>
             <p>
-              Paradis Property Maintenance is built around practical, dependable service.
-              From routine grass cutting and snow clearing to cleanups, lawn care, and general upkeep,
-              the focus is on making properties look better and stay maintained year-round.
+              From routine grass cutting and snow clearing to cleanups, lawn care, and general upkeep, the focus is on dependable service and clean results.
             </p>
           </div>
 
@@ -1179,7 +1258,7 @@
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>Main seasonal services covered</strong>
+                <strong>Seasonal coverage</strong>
                 <span>Grass cutting in season and snow clearing when winter hits.</span>
               </div>
             </div>
@@ -1195,8 +1274,8 @@
             <div class="point">
               <div class="point-mark">✓</div>
               <div>
-                <strong>General property maintenance support</strong>
-                <span>Window cleaning, spring and fall cleanups, and other upkeep services help keep the property looking its best.</span>
+                <strong>General upkeep support</strong>
+                <span>Window cleaning, cleanups, and outdoor maintenance help keep the property looking its best.</span>
               </div>
             </div>
 
@@ -1204,9 +1283,89 @@
               <div class="point-mark">✓</div>
               <div>
                 <strong>Easy to contact</strong>
-                <span>Call or text directly for quotes, availability, or questions about specific property needs.</span>
+                <span>Call or text directly for quotes, availability, or questions.</span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <div class="reviews-shell">
+          <div class="reviews-top">
+            <div>
+              <div class="eyebrow">Google Reviews</div>
+              <h2 style="margin-bottom:8px;">What Customers Are Saying</h2>
+            </div>
+
+            <div class="reviews-score">
+              <div class="stars">★★★★★</div>
+              <strong>5.0</strong>
+              <span>Local customer reviews</span>
+            </div>
+          </div>
+
+          <div class="review-stage" aria-live="polite">
+            <article class="review active">
+              <div class="review-main">
+                <blockquote>
+                  “Great service, quick communication, and the property looked clean and well maintained when the job was done.”
+                </blockquote>
+              </div>
+              <div class="review-side">
+                <div class="review-meta">
+                  <strong>Customer Name</strong>
+                  <div class="stars" style="font-size:14px; margin-bottom:8px;">★★★★★</div>
+                  <span>Google Review</span>
+                </div>
+                <p>Use this space for one of your strongest short reviews once they start coming in.</p>
+              </div>
+            </article>
+
+            <article class="review">
+              <div class="review-main">
+                <blockquote>
+                  “Very reliable and easy to deal with. Showed up on time and did exactly what was needed.”
+                </blockquote>
+              </div>
+              <div class="review-side">
+                <div class="review-meta">
+                  <strong>Customer Name</strong>
+                  <div class="stars" style="font-size:14px; margin-bottom:8px;">★★★★★</div>
+                  <span>Google Review</span>
+                </div>
+                <p>Swap in real customer names or initials when your public Google reviews are live.</p>
+              </div>
+            </article>
+
+            <article class="review">
+              <div class="review-main">
+                <blockquote>
+                  “Highly recommend for grass cutting and property maintenance. Straightforward, professional, and easy to work with.”
+                </blockquote>
+              </div>
+              <div class="review-side">
+                <div class="review-meta">
+                  <strong>Customer Name</strong>
+                  <div class="stars" style="font-size:14px; margin-bottom:8px;">★★★★★</div>
+                  <span>Google Review</span>
+                </div>
+                <p>Keep each review short and punchy for the cleanest look and best conversion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="review-dots" aria-label="Review navigation">
+            <button class="review-dot active" type="button" aria-label="Show review 1"></button>
+            <button class="review-dot" type="button" aria-label="Show review 2"></button>
+            <button class="review-dot" type="button" aria-label="Show review 3"></button>
+          </div>
+
+          <div class="review-actions">
+            <a class="btn btn-secondary" href="https://share.google/SqUJx9venj4oquIvK" target="_blank" rel="noopener noreferrer">Read Reviews on Google</a>
+            <a class="btn btn-dark" href="https://share.google/SqUJx9venj4oquIvK" target="_blank" rel="noopener noreferrer">Leave a Google Review</a>
           </div>
         </div>
       </div>
@@ -1220,7 +1379,7 @@
             <h2>Everything You Need to Reach Out</h2>
           </div>
           <p>
-            Clear contact details and service information make it easy to get started.
+            Clear contact details and service information make getting started easy.
           </p>
         </div>
 
@@ -1239,12 +1398,12 @@
           </div>
 
           <div class="business-card">
-            <h3>Best Reasons to Contact</h3>
+            <h3>Reasons to Contact</h3>
             <ul>
-              <li>Request a quote for grass cutting</li>
+              <li>Request a grass cutting quote</li>
               <li>Ask about snow clearing</li>
-              <li>Book a spring or fall cleanup</li>
-              <li>Arrange free scrap metal pickup</li>
+              <li>Book spring or fall cleanup</li>
+              <li>Arrange scrap metal pickup</li>
             </ul>
           </div>
         </div>
@@ -1257,8 +1416,7 @@
           <div class="eyebrow">Get a Quote</div>
           <h2>Need Property Maintenance Services?</h2>
           <p>
-            Call or text Paradis Property Maintenance for quotes on grass cutting, snow clearing,
-            lawn care, cleanups, window cleaning, and general property maintenance in Peterborough.
+            Call or text Paradis Property Maintenance for quotes on grass cutting, snow clearing, lawn care, cleanups, window cleaning, and general property maintenance in Peterborough.
           </p>
 
           <div class="quote-actions">
@@ -1292,5 +1450,48 @@
       <a class="btn btn-secondary btn-full" href="sms:17057724204">Text Quote</a>
     </div>
   </div>
+
+  <script>
+    const reviews = document.querySelectorAll('.review');
+    const dots = document.querySelectorAll('.review-dot');
+    let currentReview = 0;
+    let reviewInterval;
+
+    function showReview(index){
+      reviews.forEach((review, i) => {
+        review.classList.toggle('active', i === index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+
+      currentReview = index;
+    }
+
+    function nextReview(){
+      const next = (currentReview + 1) % reviews.length;
+      showReview(next);
+    }
+
+    function startReviewRotation(){
+      reviewInterval = setInterval(nextReview, 4500);
+    }
+
+    function resetReviewRotation(){
+      clearInterval(reviewInterval);
+      startReviewRotation();
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showReview(index);
+        resetReviewRotation();
+      });
+    });
+
+    showReview(0);
+    startReviewRotation();
+  </script>
 </body>
-                                                 </html>
+              </html>
