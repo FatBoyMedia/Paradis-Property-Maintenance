@@ -47,6 +47,7 @@
 
     *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
+
     body{
       margin:0;
       font-family:"Inter", Arial, Helvetica, sans-serif;
@@ -117,17 +118,20 @@
     }
 
     .brand-mark{
-      width:54px;
-      height:54px;
+      width:58px;
+      height:58px;
       border-radius:18px;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg, var(--red), var(--red-deep));
-      color:#fff;
-      font-weight:900;
-      letter-spacing:.7px;
-      box-shadow:0 16px 36px rgba(197,22,39,0.24);
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 16px 36px rgba(197,22,39,0.18);
       flex:0 0 auto;
+      border:1px solid rgba(197,22,39,0.10);
+    }
+
+    .brand-mark img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
     .brand-copy{
@@ -262,6 +266,65 @@
     }
 
     p{ margin:0; }
+
+    .profile-strip{
+      padding:20px 0 0;
+    }
+
+    .profile-card{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      background:rgba(255,255,255,0.94);
+      border:1px solid var(--line-soft);
+      border-radius:28px;
+      padding:18px;
+      box-shadow:var(--shadow-md);
+    }
+
+    .profile-left{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      min-width:0;
+      flex:1;
+    }
+
+    .profile-logo{
+      width:76px;
+      height:76px;
+      border-radius:22px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 12px 26px rgba(197,22,39,0.14);
+      border:1px solid rgba(197,22,39,0.08);
+      flex:0 0 auto;
+    }
+
+    .profile-logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .profile-copy{
+      min-width:0;
+    }
+
+    .profile-copy h3{
+      margin:0 0 6px;
+      font-size:26px;
+      line-height:1;
+    }
+
+    .profile-copy p{
+      color:var(--muted-2);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
 
     .hero{
       padding:20px 0 24px;
@@ -778,7 +841,8 @@
       }
 
       .topbar-inner,
-      .footer-inner{
+      .footer-inner,
+      .profile-card{
         flex-direction:column;
         align-items:flex-start;
       }
@@ -826,6 +890,14 @@
       .special-banner{
         padding:28px 20px;
       }
+
+      .profile-copy h3{
+        font-size:22px;
+      }
+
+      .profile-card .btn{
+        width:100%;
+      }
     }
 
     @media (max-width: 480px){
@@ -848,6 +920,10 @@
         font-size:15px;
         padding:14px 10px;
       }
+
+      .brand-copy small{
+        letter-spacing:.8px;
+      }
     }
   </style>
 </head>
@@ -867,7 +943,9 @@
   <header class="site-header">
     <div class="container nav">
       <a href="#" class="brand" aria-label="Paradis Property Maintenance home">
-        <div class="brand-mark">PP</div>
+        <div class="brand-mark">
+          <img src="images/logo.png" alt="Paradis Property Maintenance logo" />
+        </div>
         <div class="brand-copy">
           <span>Paradis Property Maintenance</span>
           <small>Peterborough, Ontario</small>
@@ -886,6 +964,25 @@
   </header>
 
   <main>
+    <section class="profile-strip">
+      <div class="container">
+        <div class="profile-card">
+          <div class="profile-left">
+            <div class="profile-logo">
+              <img src="images/logo.png" alt="Paradis Property Maintenance logo" />
+            </div>
+
+            <div class="profile-copy">
+              <h3>Paradis Property Maintenance</h3>
+              <p>Peterborough, Ontario</p>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="tel:17057724204">Call Now</a>
+        </div>
+      </div>
+    </section>
+
     <section class="hero">
       <div class="container">
         <div class="hero-shell">
@@ -1198,4 +1295,4 @@
     </div>
   </div>
 </body>
-</html>
+                                                 </html>
