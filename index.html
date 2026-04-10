@@ -584,6 +584,10 @@
       gap:10px;
     }
 
+    .sticky-inner-3{
+      grid-template-columns:repeat(3,1fr);
+    }
+
     .sticky-inner .btn{
       min-height:54px;
       font-size:16px;
@@ -681,7 +685,7 @@
 
       .hero-actions{
         display:grid;
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
         gap:10px;
       }
 
@@ -752,6 +756,16 @@
         flex-direction:column;
         align-items:flex-start;
       }
+
+      .sticky-inner-3{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+
+      .sticky-inner-3 .btn{
+        font-size:13px;
+        padding:12px 8px;
+        min-height:48px;
+      }
     }
 
     @media (max-width: 480px){
@@ -764,10 +778,6 @@
         font-size:34px;
       }
 
-      .hero-actions{
-        grid-template-columns:1fr;
-      }
-
       .logo-banner img{
         height:95px;
       }
@@ -776,6 +786,16 @@
         font-size:14px;
         padding:13px 10px;
         min-height:50px;
+      }
+
+      .sticky-inner-3{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+
+      .sticky-inner-3 .btn{
+        font-size:12px;
+        padding:12px 6px;
+        min-height:46px;
       }
     }
   </style>
@@ -825,6 +845,7 @@
               <div class="hero-actions">
                 <a class="btn btn-primary" href="tel:17057724204">Call (705) 772-4204</a>
                 <a class="btn btn-secondary" href="sms:17057724204">Text for a Quote</a>
+                <a class="btn btn-dark" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
               </div>
 
               <div class="hero-trust">
@@ -1011,9 +1032,10 @@
   </footer>
 
   <div class="sticky-bar" aria-label="Quick contact actions">
-    <div class="sticky-inner">
+    <div class="sticky-inner sticky-inner-3">
       <a class="btn btn-primary btn-full" href="tel:17057724204">Call Now</a>
       <a class="btn btn-secondary btn-full" href="sms:17057724204">Text Quote</a>
+      <a class="btn btn-dark btn-full" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
     </div>
   </div>
 </body>
