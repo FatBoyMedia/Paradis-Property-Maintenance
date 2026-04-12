@@ -684,32 +684,34 @@
       }
 
       .hero-shell{
-        min-height:auto;
+        min-height:560px;
         border-radius:22px;
       }
 
       .hero-content{
         min-height:auto;
-        padding:10px;
+        padding:14px;
         align-items:flex-end;
       }
 
       .hero-panel{
-        max-width:none;
-        width:100%;
-        padding:16px 12px 12px;
-        border-radius:18px;
+        width:min(100%, 390px);
+        max-width:390px;
+        padding:16px 14px 14px;
+        border-radius:20px;
+        background:rgba(255,255,255,0.88);
       }
 
       .hero-text{
-        font-size:16px;
+        font-size:15px;
+        line-height:1.35;
         margin-bottom:12px;
         max-width:none;
       }
 
       .hero-actions{
         grid-template-columns:1fr;
-        gap:10px;
+        gap:8px;
       }
 
       .hero-actions .btn:last-child{
@@ -756,7 +758,7 @@
 
       .gallery-item,
       .gallery-item-feature{
-        min-height:200px;
+        min-height:220px;
         border-radius:16px;
         grid-column:span 1;
         grid-row:span 1;
