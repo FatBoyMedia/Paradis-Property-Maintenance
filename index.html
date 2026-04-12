@@ -291,13 +291,15 @@
       position:relative;
       z-index:2;
       display:flex;
-      align-items:flex-end;
+      align-items:center;
+      justify-content:flex-start;
       min-height:500px;
-      padding:24px;
+      padding:40px;
     }
 
     .hero-panel{
-      max-width:600px;
+      max-width:520px;
+      margin-left:20px;
       background:rgba(255,255,255,0.92);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -689,14 +691,15 @@
       }
 
       .hero-content{
-        min-height:auto;
         padding:18px;
         align-items:flex-end;
+        justify-content:flex-start;
       }
 
       .hero-panel{
         width:min(100%, 340px);
         max-width:340px;
+        margin-left:0;
         padding:16px 14px 14px;
         border-radius:20px;
         background:rgba(255,255,255,0.78);
