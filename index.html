@@ -68,27 +68,72 @@
       margin:0 auto;
     }
 
-    .logo-banner{
+    .top-banner{
       width:100%;
       background:var(--white);
       border-bottom:1px solid var(--line-soft);
+      padding:18px 16px 16px;
+    }
+
+    .top-banner-inner{
+      width:min(100%, 1440px);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .banner-title{
+      font-size:clamp(48px, 9vw, 126px);
+      font-weight:900;
+      line-height:0.9;
+      letter-spacing:1px;
+      color:var(--red);
+    }
+
+    .banner-subtitle{
+      font-size:clamp(24px, 4vw, 62px);
+      font-weight:900;
+      line-height:1;
+      color:var(--red);
+      margin-top:6px;
+    }
+
+    .banner-services{
+      margin:18px auto 14px;
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:10px;
+      max-width:1120px;
+    }
+
+    .banner-services span{
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:0;
-      overflow:hidden;
+      min-height:62px;
+      background:var(--red);
+      color:#fff;
+      border-radius:12px;
+      font-size:clamp(14px, 1.5vw, 28px);
+      font-weight:800;
+      padding:10px 12px;
+      text-align:center;
+      box-shadow:var(--shadow-sm);
     }
 
-    .logo-banner img{
-      width:100%;
-      max-width:1600px;
-      height:170px;
-      object-fit:contain;
-      object-position:center;
-      display:block;
-      margin:0 auto;
-      transform:scale(1.18);
-      transform-origin:center;
+    .banner-tagline{
+      font-size:clamp(14px, 1.8vw, 28px);
+      font-weight:800;
+      color:var(--red-deep);
+      margin:6px 0 10px;
+    }
+
+    .banner-phone{
+      display:inline-block;
+      font-size:clamp(40px, 8vw, 108px);
+      font-weight:900;
+      line-height:1;
+      letter-spacing:1px;
+      color:var(--red);
     }
 
     .site-header{
@@ -437,8 +482,7 @@
       font-size:14px;
     }
 
-    .gallery-grid,
-    .auto-gallery{
+    .gallery-grid-8{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:16px;
@@ -465,6 +509,28 @@
       inset:0;
       background:linear-gradient(180deg, rgba(23,23,23,0.02), rgba(23,23,23,0.18));
       pointer-events:none;
+    }
+
+    .gallery-item-feature{
+      grid-column:span 2;
+      grid-row:span 2;
+      min-height:540px;
+    }
+
+    .gallery-label{
+      position:absolute;
+      left:12px;
+      bottom:12px;
+      z-index:2;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.92);
+      color:var(--charcoal);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      box-shadow:var(--shadow-sm);
     }
 
     .special-banner{
@@ -568,10 +634,22 @@
     }
 
     @media (max-width: 1200px){
-      .services-grid,
-      .gallery-grid,
-      .auto-gallery{
+      .services-grid{
         grid-template-columns:repeat(2,1fr);
+      }
+
+      .gallery-grid-8{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .gallery-item-feature{
+        grid-column:span 2;
+        grid-row:span 1;
+        min-height:360px;
+      }
+
+      .banner-services{
+        grid-template-columns:repeat(2, 1fr);
       }
     }
 
@@ -595,6 +673,22 @@
         width:min(calc(100% - 16px), var(--max));
       }
 
+      .top-banner{
+        padding:12px 10px 14px;
+      }
+
+      .banner-services{
+        grid-template-columns:repeat(2, 1fr);
+        gap:8px;
+        margin:14px auto 12px;
+      }
+
+      .banner-services span{
+        min-height:48px;
+        border-radius:10px;
+        padding:8px 10px;
+      }
+
       .nav{
         padding:10px 0;
         gap:10px;
@@ -613,19 +707,6 @@
         min-height:46px;
         padding:10px 14px;
         font-size:14px;
-      }
-
-      .logo-banner{
-        padding:0;
-      }
-
-      .logo-banner img{
-        width:100%;
-        max-width:none;
-        height:110px;
-        object-fit:contain;
-        object-position:center;
-        transform:scale(1.08);
       }
 
       .hero{
@@ -685,8 +766,7 @@
 
       .services-grid,
       .about-grid,
-      .gallery-grid,
-      .auto-gallery{
+      .gallery-grid-8{
         grid-template-columns:1fr;
       }
 
@@ -699,9 +779,12 @@
         border-radius:22px;
       }
 
-      .gallery-item{
+      .gallery-item,
+      .gallery-item-feature{
         min-height:240px;
         border-radius:20px;
+        grid-column:span 1;
+        grid-row:span 1;
       }
 
       .quote-actions{
@@ -722,10 +805,6 @@
         align-items:flex-start;
       }
 
-      .sticky-inner-3{
-        grid-template-columns:1fr 1fr 1fr;
-      }
-
       .sticky-inner-3 .btn{
         font-size:13px;
         padding:12px 8px;
@@ -743,9 +822,8 @@
         font-size:34px;
       }
 
-      .logo-banner img{
-        height:90px;
-        transform:scale(1.04);
+      .banner-services{
+        grid-template-columns:1fr;
       }
 
       .sticky-inner-3{
@@ -762,8 +840,24 @@
 </head>
 <body>
 
-  <div class="logo-banner" aria-label="Paradis Property Maintenance banner">
-    <img src="images/logo.jpg" alt="Paradis Property Maintenance logo banner" />
+  <div class="top-banner" aria-label="Paradis Property Maintenance banner">
+    <div class="top-banner-inner">
+      <div class="banner-title">PARADIS</div>
+      <div class="banner-subtitle">PROPERTY MAINTENANCE</div>
+
+      <div class="banner-services">
+        <span>Grass Cutting</span>
+        <span>Junk Removal</span>
+        <span>Snow Clearing</span>
+        <span>Scrap Metal Pick-Up</span>
+      </div>
+
+      <div class="banner-tagline">
+        Call for all your Residential or Commercial Property Maintenance!
+      </div>
+
+      <a class="banner-phone" href="tel:17057724204">705-772-4204</a>
+    </div>
   </div>
 
   <header class="site-header">
@@ -940,11 +1034,51 @@
             <h2>Recent Work</h2>
           </div>
           <p>
-            Real work completed by Paradis Property Maintenance.
+            Real examples of lawn care, clean properties, and winter service in Peterborough and surrounding areas.
           </p>
         </div>
 
-        <div id="work-gallery" class="auto-gallery"></div>
+        <div class="gallery-grid-8">
+          <div class="gallery-item gallery-item-feature">
+            <img src="images/gallery-1.jpg" alt="Large waterfront lawn maintained by Paradis Property Maintenance" />
+            <div class="gallery-label">Property Maintenance</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-2.jpg" alt="Grass cutting equipment on a maintained lawn" />
+            <div class="gallery-label">Grass Cutting</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-3.jpg" alt="Striped lawn after grass cutting service" />
+            <div class="gallery-label">Grass Cutting</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-4.jpg" alt="Freshly maintained residential lawn" />
+            <div class="gallery-label">Property Maintenance</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-5.jpg" alt="Snow removal service on a residential driveway" />
+            <div class="gallery-label">Snow Removal</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-6.jpg" alt="Snow plow clearing a private road entrance" />
+            <div class="gallery-label">Snow Removal</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-7.jpg" alt="Snow plow clearing a commercial lot" />
+            <div class="gallery-label">Snow Removal</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/gallery-8.jpg" alt="Residential driveway snow clearing service" />
+            <div class="gallery-label">Snow Removal</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -989,29 +1123,5 @@
       <a class="btn btn-dark btn-full" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
     </div>
   </div>
-
-  <script>
-    fetch('gallery.json')
-      .then(response => response.json())
-      .then(data => {
-        const gallery = document.getElementById('work-gallery');
-
-        data.images.forEach((filename, index) => {
-          const item = document.createElement('div');
-          item.className = 'gallery-item';
-
-          const img = document.createElement('img');
-          img.src = `images/${filename}`;
-          img.alt = `Paradis Property Maintenance work photo ${index + 1}`;
-          img.loading = 'lazy';
-
-          item.appendChild(img);
-          gallery.appendChild(item);
-        });
-      })
-      .catch(error => {
-        console.error('Gallery failed to load:', error);
-      });
-  </script>
 </body>
-</html>
+              </html>
