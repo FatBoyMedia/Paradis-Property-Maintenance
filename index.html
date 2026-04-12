@@ -991,39 +991,7 @@
           </div>
         </div>
 
-        <div class="gallery-grid-8">
-          <div class="gallery-item gallery-item-feature">
-            <img src="images/gallery-1.jpg" alt="Large waterfront lawn maintained by Paradis Property Maintenance" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-2.jpg" alt="Grass cutting equipment on a maintained lawn" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-3.jpg" alt="Striped lawn after grass cutting service" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-4.jpg" alt="Freshly maintained residential lawn" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-5.jpg" alt="Snow removal service on a residential driveway" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-6.jpg" alt="Snow plow clearing a private road entrance" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-7.jpg" alt="Snow plow clearing a commercial lot" />
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-8.jpg" alt="Residential driveway snow clearing service" />
-          </div>
-        </div>
+        <div class="gallery-grid-8" id="galleryGrid"></div>
       </div>
     </section>
 
@@ -1068,5 +1036,69 @@
       <a class="btn btn-dark btn-full" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
     </div>
   </div>
+
+  <script>
+    async function loadGallery() {
+      const galleryGrid = document.getElementById("galleryGrid");
+      if (!galleryGrid) return;
+
+      try {
+        const response = await fetch("gallery.json", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error("Could not load gallery.json");
+        }
+
+        const rawData = await response.json();
+
+        if (!Array.isArray(rawData) || rawData.length === 0) {
+          galleryGrid.innerHTML = "<p>No gallery images found.</p>";
+          return;
+        }
+
+        const images = rawData
+          .map((item) => {
+            if (typeof item === "string") {
+              return {
+                src: item,
+                alt: "Paradis Property Maintenance work"
+              };
+            }
+
+            if (item && typeof item === "object" && item.src) {
+              return {
+                src: item.src,
+                alt: item.alt || "Paradis Property Maintenance work"
+              };
+            }
+
+            return null;
+          })
+          .filter(Boolean);
+
+        if (images.length === 0) {
+          galleryGrid.innerHTML = "<p>No valid gallery images found.</p>";
+          return;
+        }
+
+        galleryGrid.innerHTML = images.map((item, index) => {
+          const featureClass = index === 0
+            ? "gallery-item gallery-item-feature"
+            : "gallery-item";
+
+          return `
+            <div class="${featureClass}">
+              <img src="${item.src}" alt="${item.alt}" loading="lazy" />
+            </div>
+          `;
+        }).join("");
+
+      } catch (error) {
+        console.error("Gallery load error:", error);
+        galleryGrid.innerHTML = "<p>Unable to load gallery images right now.</p>";
+      }
+    }
+
+    loadGallery();
+  </script>
 </body>
 </html>
