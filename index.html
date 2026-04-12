@@ -41,7 +41,8 @@
       --radius-xl:28px;
       --radius-lg:22px;
       --radius-md:16px;
-      --max:1440px;
+      --max:1320px;
+      --header-offset:74px;
     }
 
     *{ box-sizing:border-box; }
@@ -71,16 +72,19 @@
     .top-banner{
       width:100%;
       background:#fff;
-      overflow:hidden;
       border-bottom:1px solid var(--line-soft);
       box-shadow:0 6px 24px rgba(0,0,0,0.06);
+    }
+
+    .top-banner-inner{
+      width:min(100%, 1600px);
+      margin:0 auto;
     }
 
     .top-banner img{
       width:100%;
       height:auto;
       display:block;
-      object-fit:cover;
     }
 
     .site-header{
@@ -98,14 +102,14 @@
       justify-content:space-between;
       align-items:center;
       gap:18px;
-      padding:14px 0;
+      min-height:74px;
+      padding:10px 0;
     }
 
     .brand{
+      min-width:0;
       display:flex;
       align-items:center;
-      gap:12px;
-      min-width:0;
     }
 
     .brand-copy{
@@ -211,14 +215,14 @@
 
     h1{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(34px, 4vw, 54px);
+      font-size:clamp(34px, 4vw, 56px);
       font-weight:700;
       max-width:12ch;
     }
 
     h2{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(34px, 4vw, 56px);
+      font-size:clamp(32px, 4vw, 52px);
       font-weight:700;
     }
 
@@ -229,9 +233,12 @@
 
     p{ margin:0; }
 
+    main section[id]{
+      scroll-margin-top:calc(var(--header-offset) + 12px);
+    }
+
     .hero{
-      padding:14px 0 18px;
-      margin-top:-2px;
+      padding:18px 0 18px;
     }
 
     .hero-shell{
@@ -259,7 +266,7 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(90deg, rgba(23,23,23,0.58) 0%, rgba(23,23,23,0.22) 50%, rgba(23,23,23,0.08) 100%);
+        linear-gradient(90deg, rgba(23,23,23,0.56) 0%, rgba(23,23,23,0.22) 52%, rgba(23,23,23,0.10) 100%);
       pointer-events:none;
     }
 
@@ -301,6 +308,9 @@
 
     .hero-actions .btn{
       width:100%;
+      min-height:50px;
+      padding:12px 14px;
+      font-size:15px;
     }
 
     .hero-trust{
@@ -617,20 +627,42 @@
       .hero-content{
         min-height:560px;
       }
+
+      .hero-actions{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+
+      .hero-actions .btn:last-child{
+        grid-column:1 / -1;
+      }
     }
 
     @media (max-width: 720px){
+      :root{
+        --header-offset:66px;
+      }
+
       .container{
         width:min(calc(100% - 16px), var(--max));
       }
 
+      .top-banner{
+        box-shadow:none;
+      }
+
+      .top-banner img{
+        width:100%;
+        height:auto;
+      }
+
       .site-header .btn{
-        min-height:46px;
+        min-height:44px;
         padding:10px 14px;
         font-size:14px;
       }
 
       .nav{
+        min-height:66px;
         padding:10px 0;
         gap:10px;
       }
@@ -667,13 +699,18 @@
       }
 
       .hero-text{
-        font-size:17px;
+        font-size:18px;
         margin-bottom:14px;
+        max-width:none;
       }
 
       .hero-actions{
         grid-template-columns:1fr;
         gap:10px;
+      }
+
+      .hero-actions .btn:last-child{
+        grid-column:auto;
       }
 
       .hero-trust{
@@ -772,7 +809,9 @@
 <body>
 
   <div class="top-banner" aria-label="Paradis Property Maintenance banner">
-    <img src="images/banner.png" alt="Paradis Property Maintenance banner" />
+    <div class="top-banner-inner">
+      <img src="images/banner.png" alt="Paradis Property Maintenance banner" />
+    </div>
   </div>
 
   <header class="site-header">
