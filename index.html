@@ -37,10 +37,10 @@
       --shadow-lg:0 16px 42px rgba(0,0,0,0.09);
       --shadow-md:0 10px 26px rgba(0,0,0,0.07);
       --shadow-sm:0 5px 16px rgba(0,0,0,0.05);
-      --radius-xxl:38px;
-      --radius-xl:28px;
-      --radius-lg:22px;
-      --radius-md:16px;
+      --radius-xxl:32px;
+      --radius-xl:24px;
+      --radius-lg:20px;
+      --radius-md:14px;
       --max:1320px;
       --header-offset:74px;
     }
@@ -59,10 +59,18 @@
       line-height:1.5;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
+      overflow-x:hidden;
     }
 
-    img{ display:block; max-width:100%; }
-    a{ color:inherit; text-decoration:none; }
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
 
     .container{
       width:min(calc(100% - 32px), var(--max));
@@ -74,6 +82,7 @@
       background:#fff;
       border-bottom:1px solid var(--line-soft);
       box-shadow:0 6px 24px rgba(0,0,0,0.06);
+      overflow:hidden;
     }
 
     .top-banner-inner{
@@ -149,7 +158,9 @@
       transition:.18s ease;
     }
 
-    .nav-links a:hover{ color:var(--charcoal); }
+    .nav-links a:hover{
+      color:var(--charcoal);
+    }
 
     .btn{
       display:inline-flex;
@@ -167,7 +178,9 @@
       white-space:nowrap;
     }
 
-    .btn:hover{ transform:translateY(-1px); }
+    .btn:hover{
+      transform:translateY(-1px);
+    }
 
     .btn-primary{
       background:linear-gradient(135deg, var(--red), var(--red-deep));
@@ -188,7 +201,9 @@
       box-shadow:var(--shadow-md);
     }
 
-    .btn-full{ width:100%; }
+    .btn-full{
+      width:100%;
+    }
 
     .eyebrow{
       display:inline-flex;
@@ -231,19 +246,21 @@
       font-weight:800;
     }
 
-    p{ margin:0; }
+    p{
+      margin:0;
+    }
 
     main section[id]{
       scroll-margin-top:calc(var(--header-offset) + 12px);
     }
 
     .hero{
-      padding:18px 0 18px;
+      padding:12px 0 14px;
     }
 
     .hero-shell{
       position:relative;
-      min-height:620px;
+      min-height:500px;
       border-radius:var(--radius-xxl);
       overflow:hidden;
       box-shadow:var(--shadow-xl);
@@ -275,42 +292,42 @@
       z-index:2;
       display:flex;
       align-items:flex-end;
-      min-height:620px;
-      padding:34px;
+      min-height:500px;
+      padding:24px;
     }
 
     .hero-panel{
-      max-width:620px;
+      max-width:600px;
       background:rgba(255,255,255,0.92);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border:1px solid rgba(255,255,255,0.72);
-      border-radius:28px;
-      padding:28px 28px 22px;
+      border-radius:24px;
+      padding:22px 22px 18px;
       box-shadow:var(--shadow-lg);
     }
 
     .hero-text{
-      font-size:22px;
+      font-size:20px;
       font-weight:600;
       color:var(--charcoal);
       max-width:34ch;
-      margin:0 0 18px;
-      line-height:1.4;
+      margin:0 0 14px;
+      line-height:1.35;
     }
 
     .hero-actions{
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:12px;
-      margin-bottom:14px;
+      gap:10px;
+      margin-bottom:12px;
     }
 
     .hero-actions .btn{
       width:100%;
-      min-height:50px;
-      padding:12px 14px;
-      font-size:15px;
+      min-height:46px;
+      padding:11px 12px;
+      font-size:14px;
     }
 
     .hero-trust{
@@ -322,25 +339,25 @@
     .trust-pill{
       display:inline-flex;
       align-items:center;
-      padding:9px 12px;
+      padding:7px 10px;
       border-radius:999px;
       background:rgba(255,255,255,0.88);
       border:1px solid rgba(23,23,23,0.06);
       color:var(--muted);
-      font-size:13px;
+      font-size:12px;
       font-weight:700;
     }
 
     .section{
-      padding:42px 0 0;
+      padding:28px 0 0;
     }
 
     .section-head{
       display:flex;
       justify-content:space-between;
       align-items:end;
-      gap:24px;
-      margin-bottom:20px;
+      gap:18px;
+      margin-bottom:14px;
     }
 
     .section-head p{
@@ -358,8 +375,8 @@
     .service{
       background:var(--white);
       border:1px solid var(--line-soft);
-      border-radius:24px;
-      padding:22px;
+      border-radius:20px;
+      padding:18px;
       box-shadow:var(--shadow-sm);
       transition:.2s ease;
     }
@@ -397,8 +414,8 @@
     .about-points{
       background:var(--white);
       border:1px solid var(--line-soft);
-      border-radius:24px;
-      padding:22px;
+      border-radius:20px;
+      padding:18px;
       box-shadow:var(--shadow-sm);
     }
 
@@ -416,8 +433,8 @@
       display:flex;
       gap:12px;
       align-items:flex-start;
-      padding:14px;
-      border-radius:18px;
+      padding:12px;
+      border-radius:16px;
       background:#fbfbfb;
       border:1px solid var(--line-soft);
     }
@@ -450,13 +467,13 @@
     .gallery-grid-8{
       display:grid;
       grid-template-columns:repeat(4,1fr);
-      gap:16px;
+      gap:12px;
     }
 
     .gallery-item{
       position:relative;
-      min-height:260px;
-      border-radius:22px;
+      min-height:210px;
+      border-radius:18px;
       overflow:hidden;
       box-shadow:var(--shadow-md);
       background:#ddd;
@@ -479,15 +496,15 @@
     .gallery-item-feature{
       grid-column:span 2;
       grid-row:span 2;
-      min-height:540px;
+      min-height:436px;
     }
 
     .special-banner{
-      margin-top:16px;
+      margin-top:14px;
       background:linear-gradient(135deg, var(--charcoal), var(--charcoal-2));
       color:#fff;
-      border-radius:24px;
-      padding:24px;
+      border-radius:20px;
+      padding:18px;
       box-shadow:var(--shadow-lg);
     }
 
@@ -497,7 +514,7 @@
     }
 
     .quote{
-      padding:42px 0 120px;
+      padding:30px 0 100px;
     }
 
     .quote-card{
@@ -507,9 +524,9 @@
         linear-gradient(135deg, rgba(197,22,39,0.07), rgba(197,22,39,0.02)),
         var(--white);
       border:1px solid rgba(197,22,39,0.08);
-      border-radius:32px;
+      border-radius:24px;
       box-shadow:var(--shadow-lg);
-      padding:32px;
+      padding:24px;
     }
 
     .quote-card::after{
@@ -538,7 +555,7 @@
     }
 
     .footer{
-      padding:22px 0 120px;
+      padding:18px 0 100px;
       border-top:1px solid var(--line-soft);
       color:var(--muted);
       font-size:14px;
@@ -551,7 +568,9 @@
       flex-wrap:wrap;
     }
 
-    .footer strong{ color:var(--charcoal); }
+    .footer strong{
+      color:var(--charcoal);
+    }
 
     .sticky-bar{
       position:fixed;
@@ -594,7 +613,7 @@
       .gallery-item-feature{
         grid-column:span 2;
         grid-row:span 1;
-        min-height:360px;
+        min-height:320px;
       }
     }
 
@@ -609,7 +628,7 @@
 
       .hero-shell,
       .hero-content{
-        min-height:560px;
+        min-height:480px;
       }
 
       .hero-actions{
@@ -661,30 +680,30 @@
       }
 
       .hero{
-        padding:12px 0;
+        padding:10px 0;
       }
 
       .hero-shell{
         min-height:auto;
-        border-radius:26px;
+        border-radius:22px;
       }
 
       .hero-content{
         min-height:auto;
-        padding:12px;
+        padding:10px;
         align-items:flex-end;
       }
 
       .hero-panel{
         max-width:none;
         width:100%;
-        padding:18px 14px 14px;
-        border-radius:22px;
+        padding:16px 12px 12px;
+        border-radius:18px;
       }
 
       .hero-text{
-        font-size:18px;
-        margin-bottom:14px;
+        font-size:16px;
+        margin-bottom:12px;
         max-width:none;
       }
 
@@ -707,13 +726,13 @@
       }
 
       .section{
-        padding:34px 0 0;
+        padding:24px 0 0;
       }
 
       .section-head{
         flex-direction:column;
         align-items:flex-start;
-        margin-bottom:14px;
+        margin-bottom:12px;
       }
 
       .section-head p{
@@ -731,16 +750,20 @@
       .about-points,
       .special-banner,
       .quote-card{
-        padding:18px 16px;
-        border-radius:22px;
+        padding:16px 14px;
+        border-radius:18px;
       }
 
       .gallery-item,
       .gallery-item-feature{
-        min-height:240px;
-        border-radius:20px;
+        min-height:200px;
+        border-radius:16px;
         grid-column:span 1;
         grid-row:span 1;
+      }
+
+      .quote{
+        padding:24px 0 92px;
       }
 
       .quote-actions{
@@ -753,7 +776,7 @@
       }
 
       .footer{
-        padding:20px 0 96px;
+        padding:18px 0 92px;
       }
 
       .footer-inner{
@@ -858,15 +881,13 @@
             <div class="eyebrow">Services</div>
             <h2>Core Services</h2>
           </div>
-          <p>
-          </p>
         </div>
 
         <div class="services-grid">
           <article class="service">
             <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
-            <p>Routine grass cutting for clean, sharp, well-kept residential properties. Weekly and Biweekly services available</p>
+            <p>Routine grass cutting for clean, sharp, well-kept residential properties. Weekly and biweekly services available.</p>
           </article>
 
           <article class="service">
@@ -905,8 +926,6 @@
             <div class="eyebrow">About the Owner</div>
             <h2>Local Service. Built in Peterborough.</h2>
           </div>
-          <p>
-          </p>
         </div>
 
         <div class="about-grid">
@@ -968,8 +987,6 @@
             <div class="eyebrow">Work Gallery</div>
             <h2>Recent Work</h2>
           </div>
-          <p>
-          </p>
         </div>
 
         <div class="gallery-grid-8">
@@ -1003,62 +1020,6 @@
 
           <div class="gallery-item">
             <img src="images/gallery-8.jpg" alt="Residential driveway snow clearing service" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="quote">
-      <div class="container">
-        <div class="quote-card">
-          <div class="eyebrow">Get a Quote</div>
-          <h2>Call, Text or Email for a Quote</h2>
-          <p>
-            Contact Paradis Property Maintenance for grass cutting, property maintenance, clean ups, snow removal, or free scrap metal pick up in Peterborough.
-          </p>
-
-          <div class="quote-actions">
-            <a class="btn btn-primary" href="tel:17057724204">Call (705) 772-4204</a>
-            <a class="btn btn-secondary" href="sms:17057724204">Text for a Quote</a>
-            <a class="btn btn-dark" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Paradis Property Maintenance</strong><br />
-        Peterborough, Ontario<br />
-        <a href="tel:17057724204">(705) 772-4204</a>
-      </div>
-
-      <div>
-        <a href="mailto:paradispropertymaintenance@gmail.com">paradispropertymaintenance@gmail.com</a><br />
-        <a href="https://www.instagram.com/paradispropertymaintenance/" target="_blank" rel="noopener noreferrer">@paradispropertymaintenance</a>
-      </div>
-    </div>
-  </footer>
-
-  <div class="sticky-bar" aria-label="Quick contact actions">
-    <div class="sticky-inner sticky-inner-3">
-      <a class="btn btn-primary btn-full" href="tel:17057724204">Call Now</a>
-      <a class="btn btn-secondary btn-full" href="sms:17057724204">Text Quote</a>
-      <a class="btn btn-dark btn-full" href="mailto:paradispropertymaintenance@gmail.com">Email Us</a>
-    </div>
-  </div>
-</body>
-</html>
-          <div class="gallery-item">
-            <img src="images/gallery-7.jpg" alt="Snow plow clearing a commercial lot" />
-            <div class="gallery-label">Snow Removal</div>
-          </div>
-
-          <div class="gallery-item">
-            <img src="images/gallery-8.jpg" alt="Residential driveway snow clearing service" />
-            <div class="gallery-label">Snow Removal</div>
           </div>
         </div>
       </div>
