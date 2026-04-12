@@ -70,70 +70,17 @@
 
     .top-banner{
       width:100%;
-      background:var(--white);
+      background:#fff;
+      overflow:hidden;
       border-bottom:1px solid var(--line-soft);
-      padding:18px 16px 16px;
+      box-shadow:0 6px 24px rgba(0,0,0,0.06);
     }
 
-    .top-banner-inner{
-      width:min(100%, 1440px);
-      margin:0 auto;
-      text-align:center;
-    }
-
-    .banner-title{
-      font-size:clamp(48px, 9vw, 126px);
-      font-weight:900;
-      line-height:0.9;
-      letter-spacing:1px;
-      color:var(--red);
-    }
-
-    .banner-subtitle{
-      font-size:clamp(24px, 4vw, 62px);
-      font-weight:900;
-      line-height:1;
-      color:var(--red);
-      margin-top:6px;
-    }
-
-    .banner-services{
-      margin:18px auto 14px;
-      display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:10px;
-      max-width:1120px;
-    }
-
-    .banner-services span{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:62px;
-      background:var(--red);
-      color:#fff;
-      border-radius:12px;
-      font-size:clamp(14px, 1.5vw, 28px);
-      font-weight:800;
-      padding:10px 12px;
-      text-align:center;
-      box-shadow:var(--shadow-sm);
-    }
-
-    .banner-tagline{
-      font-size:clamp(14px, 1.8vw, 28px);
-      font-weight:800;
-      color:var(--red-deep);
-      margin:6px 0 10px;
-    }
-
-    .banner-phone{
-      display:inline-block;
-      font-size:clamp(40px, 8vw, 108px);
-      font-weight:900;
-      line-height:1;
-      letter-spacing:1px;
-      color:var(--red);
+    .top-banner img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
     }
 
     .site-header{
@@ -264,9 +211,9 @@
 
     h1{
       font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:clamp(48px, 5vw, 78px);
+      font-size:clamp(34px, 4vw, 54px);
       font-weight:700;
-      max-width:10ch;
+      max-width:12ch;
     }
 
     h2{
@@ -283,12 +230,13 @@
     p{ margin:0; }
 
     .hero{
-      padding:18px 0 18px;
+      padding:14px 0 18px;
+      margin-top:-2px;
     }
 
     .hero-shell{
       position:relative;
-      min-height:640px;
+      min-height:620px;
       border-radius:var(--radius-xxl);
       overflow:hidden;
       box-shadow:var(--shadow-xl);
@@ -311,7 +259,7 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(90deg, rgba(23,23,23,0.62) 0%, rgba(23,23,23,0.26) 52%, rgba(23,23,23,0.12) 100%);
+        linear-gradient(90deg, rgba(23,23,23,0.58) 0%, rgba(23,23,23,0.22) 50%, rgba(23,23,23,0.08) 100%);
       pointer-events:none;
     }
 
@@ -320,13 +268,13 @@
       z-index:2;
       display:flex;
       align-items:flex-end;
-      min-height:640px;
+      min-height:620px;
       padding:34px;
     }
 
     .hero-panel{
-      max-width:650px;
-      background:rgba(255,255,255,0.90);
+      max-width:620px;
+      background:rgba(255,255,255,0.92);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border:1px solid rgba(255,255,255,0.72);
@@ -335,11 +283,12 @@
       box-shadow:var(--shadow-lg);
     }
 
-    .hero-panel p{
+    .hero-text{
       font-size:22px;
+      font-weight:600;
       color:var(--charcoal);
-      max-width:40ch;
-      margin:0 0 20px;
+      max-width:34ch;
+      margin:0 0 18px;
       line-height:1.4;
     }
 
@@ -403,6 +352,11 @@
       padding:22px;
       box-shadow:var(--shadow-sm);
       transition:.2s ease;
+    }
+
+    .service:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow-md);
     }
 
     .service-icon{
@@ -648,10 +602,6 @@
         grid-row:span 1;
         min-height:360px;
       }
-
-      .banner-services{
-        grid-template-columns:repeat(2, 1fr);
-      }
     }
 
     @media (max-width: 980px){
@@ -674,20 +624,10 @@
         width:min(calc(100% - 16px), var(--max));
       }
 
-      .top-banner{
-        padding:12px 10px 14px;
-      }
-
-      .banner-services{
-        grid-template-columns:repeat(2, 1fr);
-        gap:8px;
-        margin:14px auto 12px;
-      }
-
-      .banner-services span{
-        min-height:48px;
-        border-radius:10px;
-        padding:8px 10px;
+      .site-header .btn{
+        min-height:46px;
+        padding:10px 14px;
+        font-size:14px;
       }
 
       .nav{
@@ -704,14 +644,8 @@
         letter-spacing:.7px;
       }
 
-      .site-header .btn{
-        min-height:46px;
-        padding:10px 14px;
-        font-size:14px;
-      }
-
       .hero{
-        padding:12px 0 12px;
+        padding:12px 0;
       }
 
       .hero-shell{
@@ -732,8 +666,8 @@
         border-radius:22px;
       }
 
-      .hero-panel p{
-        font-size:14px;
+      .hero-text{
+        font-size:17px;
         margin-bottom:14px;
       }
 
@@ -815,16 +749,12 @@
 
     @media (max-width: 480px){
       h1{
-        font-size:40px;
-        max-width:11ch;
+        font-size:32px;
+        max-width:12ch;
       }
 
       h2{
         font-size:34px;
-      }
-
-      .banner-services{
-        grid-template-columns:1fr;
       }
 
       .sticky-inner-3{
@@ -842,23 +772,7 @@
 <body>
 
   <div class="top-banner" aria-label="Paradis Property Maintenance banner">
-    <div class="top-banner-inner">
-      <div class="banner-title">PARADIS</div>
-      <div class="banner-subtitle">PROPERTY MAINTENANCE</div>
-
-      <div class="banner-services">
-        <span>Grass Cutting</span>
-        <span>Junk Removal</span>
-        <span>Snow Clearing</span>
-        <span>Scrap Metal Pick-Up</span>
-      </div>
-
-      <div class="banner-tagline">
-        Call for all your Residential or Commercial Property Maintenance!
-      </div>
-
-      <a class="banner-phone" href="tel:17057724204">705-772-4204</a>
-    </div>
+    <img src="images/banner.jpg" alt="Paradis Property Maintenance banner" />
   </div>
 
   <header class="site-header">
@@ -892,8 +806,8 @@
           <div class="hero-content">
             <div class="hero-panel">
               <div class="eyebrow">Local Property Services</div>
-              <p>
-                Paradis Property Maintenance provides dependable outdoor services in Peterborough, including grass cutting, property clean ups, snow removal, and free scrap metal pick up.
+              <p class="hero-text">
+                Dependable grass cutting, property clean ups, snow removal, and scrap metal pick up in Peterborough.
               </p>
 
               <div class="hero-actions">
@@ -922,6 +836,7 @@
             <h2>Core Services</h2>
           </div>
           <p>
+            A simple, focused service list built around the work Paradis Property Maintenance wants to be known for.
           </p>
         </div>
 
@@ -929,7 +844,7 @@
           <article class="service">
             <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
-            <p>Routine grass cutting for clean, sharp, well-kept residential properties. Weekly or Biweekly service.</p>
+            <p>Routine grass cutting for clean, sharp, well-kept residential properties.</p>
           </article>
 
           <article class="service">
@@ -941,7 +856,7 @@
           <article class="service">
             <div class="service-icon">❄️</div>
             <h3>Snow Removal</h3>
-            <p>Reliable snow removal for driveways, walkways, access areas, and commercial parking lots during winter weather.</p>
+            <p>Reliable snow removal for driveways, walkways, and access areas during winter weather.</p>
           </article>
 
           <article class="service">
@@ -1123,4 +1038,4 @@
     </div>
   </div>
 </body>
-              </html>
+</html>
