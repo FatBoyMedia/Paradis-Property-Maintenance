@@ -370,7 +370,7 @@
 
     .services-grid{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:16px;
     }
 
@@ -403,6 +403,36 @@
     .service p{
       color:var(--muted);
       font-size:14px;
+    }
+
+    .service-media-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .service-media-grid .gallery-item{
+      position:relative;
+      min-height:180px;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:var(--shadow-md);
+      background:#ddd;
+    }
+
+    .service-media-grid .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .service-media-grid .gallery-item::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(23,23,23,0.02), rgba(23,23,23,0.14));
+      pointer-events:none;
     }
 
     .about-grid{
@@ -464,61 +494,6 @@
       display:block;
       color:var(--muted);
       font-size:14px;
-    }
-
-    .service-gallery-sections{
-      display:grid;
-      gap:22px;
-    }
-
-    .service-gallery-block{
-      background:var(--white);
-      border:1px solid var(--line-soft);
-      border-radius:20px;
-      padding:18px;
-      box-shadow:var(--shadow-sm);
-    }
-
-    .service-gallery-head{
-      margin-bottom:14px;
-    }
-
-    .service-gallery-head h3{
-      margin:0 0 6px;
-    }
-
-    .service-gallery-head p{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .service-gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-    }
-
-    .gallery-item{
-      position:relative;
-      min-height:210px;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:var(--shadow-md);
-      background:#ddd;
-    }
-
-    .gallery-item img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .gallery-item::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg, rgba(23,23,23,0.02), rgba(23,23,23,0.18));
-      pointer-events:none;
     }
 
     .special-banner{
@@ -658,10 +633,6 @@
       .services-grid{
         grid-template-columns:repeat(2,1fr);
       }
-
-      .service-gallery-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
     }
 
     @media (max-width: 980px){
@@ -792,7 +763,7 @@
 
       .services-grid,
       .about-grid,
-      .service-gallery-grid{
+      .service-media-grid{
         grid-template-columns:1fr;
       }
 
@@ -800,13 +771,12 @@
       .about-card,
       .about-points,
       .special-banner,
-      .quote-card,
-      .service-gallery-block{
+      .quote-card{
         padding:16px 14px;
         border-radius:18px;
       }
 
-      .gallery-item{
+      .service-media-grid .gallery-item{
         min-height:220px;
         border-radius:16px;
       }
@@ -850,11 +820,6 @@
     }
 
     @media (max-width: 480px){
-      h1{
-        font-size:32px;
-        max-width:12ch;
-      }
-
       h2{
         font-size:34px;
       }
@@ -891,7 +856,6 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#services">Services</a>
         <a href="#about">About the Owner</a>
-        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -946,24 +910,28 @@
             <div class="service-icon">🌿</div>
             <h3>Grass Cutting</h3>
             <p>Routine grass cutting for clean, sharp, well-kept residential properties. Weekly and biweekly services available.</p>
+            <div class="service-media-grid" id="grassGallery"></div>
           </article>
 
           <article class="service">
             <div class="service-icon">🧹</div>
             <h3>Property Maintenance & Clean Ups</h3>
             <p>General outdoor upkeep, seasonal clean ups, and property care to keep things looking right.</p>
+            <div class="service-media-grid" id="propertyGallery"></div>
           </article>
 
           <article class="service">
             <div class="service-icon">❄️</div>
             <h3>Snow Removal</h3>
             <p>Reliable snow removal for driveways, walkways, access areas, and commercial parking lots during winter weather.</p>
+            <div class="service-media-grid" id="snowGallery"></div>
           </article>
 
           <article class="service">
             <div class="service-icon">♻️</div>
             <h3>Free Scrap Metal Pick Up</h3>
             <p>Free scrap metal pick up available in the Peterborough area.</p>
+            <div class="service-media-grid" id="scrapGallery"></div>
           </article>
         </div>
 
@@ -1033,51 +1001,6 @@
                 <span>Year-round service for homes, businesses, and seasonal properties.</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Work by Service</div>
-            <h2>Recent Work</h2>
-          </div>
-        </div>
-
-        <div class="service-gallery-sections">
-          <div class="service-gallery-block" id="grassSection">
-            <div class="service-gallery-head">
-              <h3>Grass Cutting</h3>
-              <p>Recent grass cutting work and finished lawns.</p>
-            </div>
-            <div class="service-gallery-grid" id="grassGallery"></div>
-          </div>
-
-          <div class="service-gallery-block" id="propertySection">
-            <div class="service-gallery-head">
-              <h3>Property Maintenance & Clean Ups</h3>
-              <p>Outdoor upkeep, clean ups, and general property care.</p>
-            </div>
-            <div class="service-gallery-grid" id="propertyGallery"></div>
-          </div>
-
-          <div class="service-gallery-block" id="snowSection">
-            <div class="service-gallery-head">
-              <h3>Snow Removal</h3>
-              <p>Driveways, access areas, and winter service work.</p>
-            </div>
-            <div class="service-gallery-grid" id="snowGallery"></div>
-          </div>
-
-          <div class="service-gallery-block" id="scrapSection">
-            <div class="service-gallery-head">
-              <h3>Scrap Metal Pick Up</h3>
-              <p>Scrap metal pick up jobs in the Peterborough area.</p>
-            </div>
-            <div class="service-gallery-grid" id="scrapGallery"></div>
           </div>
         </div>
       </div>
@@ -1185,15 +1108,14 @@
       }
 
       function renderGallery(target, items) {
-        const block = target.closest(".service-gallery-block");
-        const normalized = normalizeItems(items);
+        const images = normalizeItems(items);
 
-        if (normalized.length === 0) {
-          if (block) block.style.display = "none";
+        if (!images.length) {
+          target.innerHTML = "";
           return;
         }
 
-        target.innerHTML = normalized.map((item) => `
+        target.innerHTML = images.map((item) => `
           <div class="gallery-item">
             <img src="${item.src}" alt="${item.alt}" loading="lazy" />
           </div>
@@ -1207,20 +1129,45 @@
         }
 
         const rawData = await response.json();
-        const galleries = rawData.galleries || rawData;
 
-        renderGallery(grassGallery, galleries.grass_cutting || []);
-        renderGallery(propertyGallery, galleries.property_maintenance || []);
-        renderGallery(snowGallery, galleries.snow_removal || []);
-        renderGallery(scrapGallery, galleries.scrap_metal || []);
+        let grouped = null;
+
+        if (rawData && rawData.galleries) {
+          grouped = rawData.galleries;
+        } else if (
+          rawData &&
+          (rawData.grass_cutting || rawData.property_maintenance || rawData.snow_removal || rawData.scrap_metal)
+        ) {
+          grouped = rawData;
+        }
+
+        if (grouped) {
+          renderGallery(grassGallery, grouped.grass_cutting || []);
+          renderGallery(propertyGallery, grouped.property_maintenance || []);
+          renderGallery(snowGallery, grouped.snow_removal || []);
+          renderGallery(scrapGallery, grouped.scrap_metal || []);
+          return;
+        }
+
+        let flatImages = [];
+
+        if (Array.isArray(rawData)) {
+          flatImages = rawData;
+        } else if (rawData && Array.isArray(rawData.images)) {
+          flatImages = rawData.images;
+        }
+
+        renderGallery(grassGallery, flatImages.slice(0, 2));
+        renderGallery(propertyGallery, flatImages.slice(2, 4));
+        renderGallery(snowGallery, flatImages.slice(4, 8));
+        renderGallery(scrapGallery, flatImages.slice(8, 12));
 
       } catch (error) {
         console.error("Gallery load error:", error);
-        grassGallery.innerHTML = "<p>Unable to load gallery images right now.</p>";
       }
     }
 
     loadGallery();
   </script>
 </body>
-  </html>
+</html>
