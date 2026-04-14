@@ -259,54 +259,33 @@
     }
 
     .hero-shell{
-      position:relative;
-      min-height:500px;
+      min-height:auto;
       border-radius:var(--radius-xxl);
       overflow:hidden;
       box-shadow:var(--shadow-xl);
-      background:#ddd;
-    }
-
-    .hero-image{
-      position:absolute;
-      inset:0;
-    }
-
-    .hero-image img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .hero-image::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(90deg, rgba(23,23,23,0.56) 0%, rgba(23,23,23,0.22) 52%, rgba(23,23,23,0.10) 100%);
-      pointer-events:none;
+      background:var(--white);
+      border:1px solid var(--line-soft);
     }
 
     .hero-content{
       position:relative;
       z-index:2;
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
-      min-height:500px;
-      padding:40px;
+      display:block;
+      min-height:auto;
+      padding:0;
     }
 
     .hero-panel{
-      max-width:520px;
-      margin-left:20px;
-      background:rgba(255,255,255,0.92);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border:1px solid rgba(255,255,255,0.72);
-      border-radius:24px;
-      padding:22px 22px 18px;
-      box-shadow:var(--shadow-lg);
+      width:100%;
+      max-width:none;
+      margin:0;
+      background:transparent;
+      backdrop-filter:none;
+      -webkit-backdrop-filter:none;
+      border:none;
+      border-radius:0;
+      padding:32px;
+      box-shadow:none;
     }
 
     .hero-text{
@@ -640,9 +619,8 @@
         grid-template-columns:1fr;
       }
 
-      .hero-shell,
       .hero-content{
-        min-height:480px;
+        min-height:auto;
       }
 
       .hero-actions{
@@ -698,24 +676,24 @@
       }
 
       .hero-shell{
-        min-height:560px;
+        min-height:auto;
         border-radius:22px;
       }
 
       .hero-content{
         min-height:auto;
-        padding:10px 10px 10px 4px;
-        align-items:flex-end;
-        justify-content:flex-start;
+        padding:0;
+        align-items:unset;
+        justify-content:unset;
       }
 
       .hero-panel{
-        width:min(78vw, 255px);
-        max-width:255px;
+        width:100%;
+        max-width:none;
         margin-left:0;
-        padding:14px 12px 12px;
-        border-radius:18px;
-        background:rgba(255,255,255,0.72);
+        padding:18px 16px 16px;
+        border-radius:0;
+        background:transparent;
       }
 
       .hero-text{
@@ -866,10 +844,6 @@
     <section class="hero">
       <div class="container">
         <div class="hero-shell">
-          <div class="hero-image">
-            <img src="images/hero.jpg" alt="Paradis Property Maintenance featured work" />
-          </div>
-
           <div class="hero-content">
             <div class="hero-panel">
               <div class="eyebrow">Local Property Services</div>
@@ -915,9 +889,7 @@
           <article class="service">
             <div class="service-icon">🧹</div>
             <h3>Property Maintenance & Clean Ups</h3>
-            <p>General outdoor upkeep, seasonal clean ups, and property care to keep things looking right. 
-            </p>
-            
+            <p>General outdoor upkeep, seasonal clean ups, and property care to keep things looking right.</p>
             <div class="service-media-grid" id="propertyGallery"></div>
           </article>
 
